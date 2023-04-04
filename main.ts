@@ -1,9 +1,9 @@
-function Walk () {
+function Walk() {
     if (Battle == 0) {
         if (LastDirection == 0) {
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 . . . . . . f f f f . . . . . . 
                 . . . . f f e e e e f f . . . . 
                 . . . f e e e f f e e e f . . . 
@@ -20,7 +20,7 @@ function Walk () {
                 . . 4 4 f 4 4 4 4 4 4 f 4 4 . . 
                 . . . . . f f f f f f . . . . . 
                 . . . . . f f . . f f . . . . . 
-                `,img`
+                `, img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . f f f f . . . . . . 
                 . . . . f f e e e e f f . . . . 
@@ -37,7 +37,7 @@ function Walk () {
                 . . . 4 f 2 2 2 2 2 e d d 4 . . 
                 . . . e f f f f f f e e 4 . . . 
                 . . . . f f f . . . . . . . . . 
-                `,img`
+                `, img`
                 . . . . . . f f f f . . . . . . 
                 . . . . f f e e e e f f . . . . 
                 . . . f e e e f f e e e f . . . 
@@ -54,7 +54,7 @@ function Walk () {
                 . . 4 4 f 4 4 4 4 4 4 f 4 4 . . 
                 . . . . . f f f f f f . . . . . 
                 . . . . . f f . . f f . . . . . 
-                `,img`
+                `, img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . f f f f . . . . . . 
                 . . . . f f e e e e f f . . . . 
@@ -72,14 +72,14 @@ function Walk () {
                 . . . 4 e e f f f f f f e . . . 
                 . . . . . . . . . f f f . . . . 
                 `],
-            200,
-            true
+                200,
+                true
             )
         }
         if (LastDirection == 1) {
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 . . . . . . f f f f f f . . . . 
                 . . . . f f e e e e f 2 f . . . 
                 . . . f f e e e e f 2 2 2 f . . 
@@ -96,7 +96,7 @@ function Walk () {
                 . . . . . f e e f 4 5 5 f . . . 
                 . . . . . . f f f f f f . . . . 
                 . . . . . . . f f f . . . . . . 
-                `,img`
+                `, img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . f f f f f f . . . . 
                 . . . . f f e e e e f 2 f . . . 
@@ -113,7 +113,7 @@ function Walk () {
                 . . . . f f f e e f 5 5 f f . . 
                 . . . . f f f f f f f f f f . . 
                 . . . . . f f . . . f f f . . . 
-                `,img`
+                `, img`
                 . . . . . . f f f f f f . . . . 
                 . . . . f f e e e e f 2 f . . . 
                 . . . f f e e e e f 2 2 2 f . . 
@@ -130,7 +130,7 @@ function Walk () {
                 . . . . . f e e f 4 5 5 f . . . 
                 . . . . . . f f f f f f . . . . 
                 . . . . . . . f f f . . . . . . 
-                `,img`
+                `, img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . f f f f f f . . . . 
                 . . . . f f e e e e f 2 f . . . 
@@ -148,14 +148,14 @@ function Walk () {
                 . . . . f f f f f f f f f f . . 
                 . . . . . f f . . . f f f . . . 
                 `],
-            200,
-            true
+                200,
+                true
             )
         }
         if (LastDirection == 2) {
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 . . . . . . f f f f . . . . . . 
                 . . . . f f f 2 2 f f f . . . . 
                 . . . f f f 2 2 2 2 f f f . . . 
@@ -172,7 +172,7 @@ function Walk () {
                 . . 4 4 f 4 4 5 5 4 4 f 4 4 . . 
                 . . . . . f f f f f f . . . . . 
                 . . . . . f f . . f f . . . . . 
-                `,img`
+                `, img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . f f f f . . . . . . 
                 . . . . f f f 2 2 f f f . . . . 
@@ -189,7 +189,7 @@ function Walk () {
                 . . . . f 4 4 5 5 f e e . . . . 
                 . . . . f f f f f f f . . . . . 
                 . . . . f f f . . . . . . . . . 
-                `,img`
+                `, img`
                 . . . . . . f f f f . . . . . . 
                 . . . . f f f 2 2 f f f . . . . 
                 . . . f f f 2 2 2 2 f f f . . . 
@@ -206,7 +206,7 @@ function Walk () {
                 . . 4 4 f 4 4 5 5 4 4 f 4 4 . . 
                 . . . . . f f f f f f . . . . . 
                 . . . . . f f . . f f . . . . . 
-                `,img`
+                `, img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . f f f f . . . . . . 
                 . . . . f f f 2 2 f f f . . . . 
@@ -224,14 +224,14 @@ function Walk () {
                 . . . . . f f f f f f f . . . . 
                 . . . . . . . . . f f f . . . . 
                 `],
-            200,
-            true
+                200,
+                true
             )
         }
         if (LastDirection == 3) {
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 . . . . f f f f f f . . . . . . 
                 . . . f 2 f e e e e f f . . . . 
                 . . f 2 2 2 f e e e e f f . . . 
@@ -248,7 +248,7 @@ function Walk () {
                 . . . f 5 5 4 f e e f . . . . . 
                 . . . . f f f f f f . . . . . . 
                 . . . . . . f f f . . . . . . . 
-                `,img`
+                `, img`
                 . . . . . . . . . . . . . . . . 
                 . . . . f f f f f f . . . . . . 
                 . . . f 2 f e e e e f f . . . . 
@@ -265,7 +265,7 @@ function Walk () {
                 . . f f 5 5 f e e f f f . . . . 
                 . . f f f f f f f f f f . . . . 
                 . . . f f f . . . f f . . . . . 
-                `,img`
+                `, img`
                 . . . . f f f f f f . . . . . . 
                 . . . f 2 f e e e e f f . . . . 
                 . . f 2 2 2 f e e e e f f . . . 
@@ -282,7 +282,7 @@ function Walk () {
                 . . . f 5 5 4 f e e f . . . . . 
                 . . . . f f f f f f . . . . . . 
                 . . . . . . f f f . . . . . . . 
-                `,img`
+                `, img`
                 . . . . . . . . . . . . . . . . 
                 . . . . f f f f f f . . . . . . 
                 . . . f 2 f e e e e f f . . . . 
@@ -300,15 +300,15 @@ function Walk () {
                 . . f f f f f f f f f f . . . . 
                 . . . f f f . . . f f . . . . . 
                 `],
-            200,
-            true
+                200,
+                true
             )
         }
     } else if (Battle == 1) {
         if (LastDirection == 0) {
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 ........................
                 ..............ffffff....
                 .............f2feeeeff..
@@ -333,7 +333,7 @@ function Walk () {
                 ........................
                 ........................
                 ........................
-                `,img`
+                `, img`
                 ........................
                 ..............fff.......
                 .............f2fffff....
@@ -359,14 +359,14 @@ function Walk () {
                 ........................
                 ........................
                 `],
-            350,
-            true
+                350,
+                true
             )
         }
         if (LastDirection == 1) {
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 ........................
                 ..............ffffff....
                 .............f2feeeeff..
@@ -391,7 +391,7 @@ function Walk () {
                 ........................
                 ........................
                 ........................
-                `,img`
+                `, img`
                 ........................
                 ..............fff.......
                 .............f2fffff....
@@ -417,14 +417,14 @@ function Walk () {
                 ........................
                 ........................
                 `],
-            350,
-            true
+                350,
+                true
             )
         }
         if (LastDirection == 2) {
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 ........................
                 ..............ffffff....
                 .............f2feeeeff..
@@ -449,7 +449,7 @@ function Walk () {
                 ........................
                 ........................
                 ........................
-                `,img`
+                `, img`
                 ........................
                 ..............fff.......
                 .............f2fffff....
@@ -475,14 +475,14 @@ function Walk () {
                 ........................
                 ........................
                 `],
-            350,
-            true
+                350,
+                true
             )
         }
         if (LastDirection == 3) {
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 ........................
                 ..............ffffff....
                 .............f2feeeeff..
@@ -507,7 +507,7 @@ function Walk () {
                 ........................
                 ........................
                 ........................
-                `,img`
+                `, img`
                 ........................
                 ..............fff.......
                 .............f2fffff....
@@ -533,12 +533,12 @@ function Walk () {
                 ........................
                 ........................
                 `],
-            350,
-            true
+                350,
+                true
             )
         }
     } else {
-    	
+
     }
 }
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.doorLockedNorth, function (sprite, location) {
@@ -548,7 +548,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 0
     Walk()
 })
-function SpeedCreate () {
+function SpeedCreate() {
     HEROspeed = statusbars.create(40, 4, StatusBarKind.Health)
     HEROspeed.value = 0
     HEROspeed.max = 100
@@ -557,7 +557,7 @@ function SpeedCreate () {
     HEROspeed.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
     HEROspeed.setPosition(120, 20)
 }
-function BOSSHPcreate () {
+function BOSSHPcreate() {
     BOSSHP_1 = statusbars.create(40, 4, StatusBarKind.Health)
     BOSSHP_1.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
     BOSSHP_1.max = 540
@@ -572,7 +572,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     }
     game.showLongText(HeroInformation, DialogLayout.Full)
 })
-function Enemy3Speedcreate () {
+function Enemy3Speedcreate() {
     EnemySpeed_3 = statusbars.create(40, 4, StatusBarKind.Health)
     EnemySpeed_3.setStatusBarFlag(StatusBarFlag.SmoothTransition, false)
     EnemySpeed_3.value = 0
@@ -581,7 +581,7 @@ function Enemy3Speedcreate () {
     EnemySpeed_3.setColor(2, 1)
     EnemySpeed_3.setPosition(35, 12)
 }
-function AssessBattle1 () {
+function AssessBattle1() {
     if (Battle == 1) {
         if (CurrentEnemy == 1) {
             controller.moveSprite(Hero, 0, 0)
@@ -591,8 +591,8 @@ function AssessBattle1 () {
             Enemy1HPcreate()
             Enemy1Speedcreate()
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 ........................
                 ..............ffffff....
                 .............f2feeeeff..
@@ -617,7 +617,7 @@ function AssessBattle1 () {
                 ........................
                 ........................
                 ........................
-                `,img`
+                `, img`
                 ........................
                 ..............fff.......
                 .............f2fffff....
@@ -643,12 +643,12 @@ function AssessBattle1 () {
                 ........................
                 ........................
                 `],
-            350,
-            true
+                350,
+                true
             )
             animation.runImageAnimation(
-            Enemy1,
-            [img`
+                Enemy1,
+                [img`
                 . . . . . . c c c c c c . . . . 
                 . . . . . c 6 7 7 7 7 6 c . . . 
                 . . . . c 7 7 7 7 7 7 7 7 c . . 
@@ -665,7 +665,7 @@ function AssessBattle1 () {
                 . . f c 6 6 6 6 6 1 1 1 1 1 6 f 
                 . . . f 6 6 6 1 1 1 1 1 1 6 f . 
                 . . . . f c c c c c c c c c . . 
-                `,img`
+                `, img`
                 . . . . . . . c c c c c c . . . 
                 . . . . . . c 6 7 7 7 7 6 c . . 
                 . . . . . c 7 7 7 7 7 7 7 7 c . 
@@ -683,8 +683,8 @@ function AssessBattle1 () {
                 . . c c 6 6 7 1 1 1 1 1 6 c . . 
                 . . . c c c c c c c c c c . . . 
                 `],
-            350,
-            true
+                350,
+                true
             )
             tiles.setCurrentTilemap(tilemap`層級2`)
             scene.centerCameraAt(150, 130)
@@ -695,7 +695,7 @@ function AssessBattle1 () {
         }
     }
 }
-function Enemy2Speedcreate () {
+function Enemy2Speedcreate() {
     EnemySpeed_2 = statusbars.create(40, 4, StatusBarKind.Health)
     EnemySpeed_2.setStatusBarFlag(StatusBarFlag.SmoothTransition, false)
     EnemySpeed_2.value = 0
@@ -704,10 +704,10 @@ function Enemy2Speedcreate () {
     EnemySpeed_2.setColor(2, 1)
     EnemySpeed_2.setPosition(35, 12)
 }
-function RecoverHP () {
+function RecoverHP() {
     animation.runImageAnimation(
-    Hero,
-    [img`
+        Hero,
+        [img`
         ........333333fffff33333
         ........33...f2feeeeff33
         .........33333333333333.
@@ -732,7 +732,7 @@ function RecoverHP () {
         ........................
         ........................
         ........................
-        `,img`
+        `, img`
         ..............ffffff....
         .............f2feeeeff..
         ........33333222feeee333
@@ -757,7 +757,7 @@ function RecoverHP () {
         ........................
         ........................
         ........................
-        `,img`
+        `, img`
         ..............ffffff....
         .............f2feeeeff..
         ............f222feeeeff.
@@ -782,7 +782,7 @@ function RecoverHP () {
         ........................
         ........................
         ........................
-        `,img`
+        `, img`
         ..............ffffff....
         .............f2feeeeff..
         ............f222feeeeff.
@@ -807,7 +807,7 @@ function RecoverHP () {
         ........................
         ........................
         ........................
-        `,img`
+        `, img`
         ..............ffffff....
         .............f2feeeeff..
         ............f222feeeeff.
@@ -833,18 +833,18 @@ function RecoverHP () {
         ........................
         ........................
         `],
-    250,
-    true
+        250,
+        true
     )
 }
-function TittleScene () {
+function TittleScene() {
     game.showLongText("歡迎來到RPG速通地下城", DialogLayout.Bottom)
     game.showLongText("勝利條件:玩家到指定位置", DialogLayout.Bottom)
     game.showLongText("失敗條件:玩家HP為0", DialogLayout.Bottom)
     game.showLongText("按下B後可以查看玩家訊息", DialogLayout.Bottom)
     game.splash("1F", "難度:簡單")
 }
-function Enemy1HPcreate () {
+function Enemy1HPcreate() {
     if (Scene == 1) {
         EnemyHP_1 = statusbars.create(40, 4, StatusBarKind.Health)
         EnemyHP_1.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
@@ -868,7 +868,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 3
     Walk()
 })
-function AssessBattle3 () {
+function AssessBattle3() {
     if (Battle == 1) {
         if (CurrentEnemy == 3) {
             controller.moveSprite(Hero, 0, 0)
@@ -878,8 +878,8 @@ function AssessBattle3 () {
             Enemy3HPcreate()
             Enemy3Speedcreate()
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 ........................
                 ..............ffffff....
                 .............f2feeeeff..
@@ -904,7 +904,7 @@ function AssessBattle3 () {
                 ........................
                 ........................
                 ........................
-                `,img`
+                `, img`
                 ........................
                 ..............fff.......
                 .............f2fffff....
@@ -930,12 +930,12 @@ function AssessBattle3 () {
                 ........................
                 ........................
                 `],
-            350,
-            true
+                350,
+                true
             )
             animation.runImageAnimation(
-            Enemy3,
-            [img`
+                Enemy3,
+                [img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . c c c c . . . . 
                 . . . . . . c c 5 5 5 5 c c . . 
@@ -952,7 +952,7 @@ function AssessBattle3 () {
                 . c d d d b 5 5 d c c c c . . . 
                 . . c c c b 5 5 b c c c c c . . 
                 . . . . c b 5 5 d c b b b c . . 
-                `,img`
+                `, img`
                 . . . . . . . c c c c c . . . . 
                 . . . . . . c 5 5 5 5 5 c c . . 
                 . . . . . c 5 5 f 1 5 5 5 5 c . 
@@ -969,7 +969,7 @@ function AssessBattle3 () {
                 . . c c c b b 5 5 d c . . . . . 
                 . . . . . c c c c c c c . . . . 
                 . . . . . . . c b b b c . . . . 
-                `,img`
+                `, img`
                 . . . . . . . c c c c c . . . . 
                 . . . . . . c 5 5 5 5 5 c c . . 
                 . . . . . c 5 5 f 1 5 5 5 5 c . 
@@ -986,7 +986,7 @@ function AssessBattle3 () {
                 . . . c c c b b 5 5 d c . . . . 
                 . . . . . c c c c c c c . . . . 
                 . . . . . . . c b b b c . . . . 
-                `,img`
+                `, img`
                 . . . . . . . c c c c c . . . . 
                 . . . . . . c 5 5 5 5 5 c c . . 
                 . . . . . c 5 5 f 1 5 5 5 5 c . 
@@ -1003,7 +1003,7 @@ function AssessBattle3 () {
                 c c c c c c b b 5 5 b c . . . . 
                 . . . . . . c c c c c c . . . . 
                 . . . . . . c b b b c . . . . . 
-                `,img`
+                `, img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . c c c c . . . . 
                 . . . . . . c c 5 5 5 5 c c . . 
@@ -1020,7 +1020,7 @@ function AssessBattle3 () {
                 c c d d d b 5 5 d c c c c . . . 
                 . . c c c b 5 5 b c c b c . . . 
                 . . . . . c b 5 5 d c c c . . . 
-                `,img`
+                `, img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . c c c c . . . . 
                 . . . . . . c c 5 5 5 5 c c . . 
@@ -1038,8 +1038,8 @@ function AssessBattle3 () {
                 . . . c c b 5 5 c c c b b c . . 
                 . . . . . c 5 5 d c c c c c . . 
                 `],
-            350,
-            true
+                350,
+                true
             )
             tiles.setCurrentTilemap(tilemap`層級2`)
             scene.centerCameraAt(150, 130)
@@ -1050,7 +1050,7 @@ function AssessBattle3 () {
         }
     }
 }
-function JuggernautHPcreate () {
+function JuggernautHPcreate() {
     if (Scene == 2) {
         JuggernautHP = statusbars.create(40, 4, StatusBarKind.Health)
         JuggernautHP.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
@@ -1061,7 +1061,7 @@ function JuggernautHPcreate () {
         JuggernautHP.setPosition(43, 5)
     }
 }
-function AssessBattle5 () {
+function AssessBattle5() {
     if (Battle == 1) {
         if (CurrentEnemy == 5) {
             controller.moveSprite(Hero, 0, 0)
@@ -1071,8 +1071,8 @@ function AssessBattle5 () {
             JuggernautHPcreate()
             JuggernautSpeedcreate()
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 ........................
                 ..............ffffff....
                 .............f2feeeeff..
@@ -1097,7 +1097,7 @@ function AssessBattle5 () {
                 ........................
                 ........................
                 ........................
-                `,img`
+                `, img`
                 ........................
                 ..............fff.......
                 .............f2fffff....
@@ -1123,12 +1123,12 @@ function AssessBattle5 () {
                 ........................
                 ........................
                 `],
-            350,
-            true
+                350,
+                true
             )
             animation.runImageAnimation(
-            Juggernaut,
-            [img`
+                Juggernaut,
+                [img`
                 ........................
                 .........bffffffdd......
                 ........ffcffffffef.....
@@ -1161,7 +1161,7 @@ function AssessBattle5 () {
                 .....c888668bddcc888d...
                 .....d88888c............
                 ........................
-                `,img`
+                `, img`
                 ..........dddddd......
                 .........efffccfffc...
                 ........bffffffffef...
@@ -1195,8 +1195,8 @@ function AssessBattle5 () {
                 ......b6b..........f..
                 ......................
                 `],
-            200,
-            true
+                200,
+                true
             )
             tiles.setCurrentTilemap(tilemap`層級2`)
             scene.centerCameraAt(150, 130)
@@ -1212,7 +1212,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 1
     Walk()
 })
-function Enemy1Speedcreate () {
+function Enemy1Speedcreate() {
     EnemySpeed_1 = statusbars.create(40, 4, StatusBarKind.Health)
     EnemySpeed_1.setStatusBarFlag(StatusBarFlag.SmoothTransition, false)
     EnemySpeed_1.value = 0
@@ -1221,7 +1221,7 @@ function Enemy1Speedcreate () {
     EnemySpeed_1.setColor(2, 1)
     EnemySpeed_1.setPosition(35, 12)
 }
-function HPcreate () {
+function HPcreate() {
     HP = statusbars.create(40, 4, StatusBarKind.Health)
     HP.max = HPvalue
     HP.value = HPvalue
@@ -1229,7 +1229,7 @@ function HPcreate () {
     HP.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
     HP.setPosition(129, 5)
 }
-function DestoryStatue () {
+function DestoryStatue() {
     sprites.destroy(HP, effects.none, 100)
     sprites.destroy(SP, effects.none, 100)
     sprites.destroy(HEROspeed, effects.none, 100)
@@ -1238,7 +1238,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 2
     Walk()
 })
-function Scene1F () {
+function Scene1F() {
     tiles.setCurrentTilemap(tilemap`層級1`)
     Hero = sprites.create(img`
         . . . . . . f f f f . . . . . . 
@@ -1411,7 +1411,7 @@ function Scene1F () {
     scene.cameraFollowSprite(Hero)
     controller.moveSprite(Hero, 100, 100)
 }
-function BOSSSpeedCreate () {
+function BOSSSpeedCreate() {
     BOSSSpeed_1 = statusbars.create(40, 4, StatusBarKind.Health)
     BOSSSpeed_1.max = 100
     BOSSSpeed_1.value = 0
@@ -1420,7 +1420,7 @@ function BOSSSpeedCreate () {
     BOSSSpeed_1.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
     BOSSSpeed_1.setPosition(35, 12)
 }
-function HeroSPcreate () {
+function HeroSPcreate() {
     SP = statusbars.create(40, 4, StatusBarKind.Health)
     SP.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
     SP.max = SPvalue
@@ -1429,7 +1429,7 @@ function HeroSPcreate () {
     SP.setColor(8, 1)
     SP.setPosition(129, 12)
 }
-function JuggernautSpeedcreate () {
+function JuggernautSpeedcreate() {
     JuggernautSpeed = statusbars.create(40, 4, StatusBarKind.Health)
     JuggernautSpeed.setStatusBarFlag(StatusBarFlag.SmoothTransition, false)
     JuggernautSpeed.value = 0
@@ -1438,7 +1438,7 @@ function JuggernautSpeedcreate () {
     JuggernautSpeed.setColor(2, 1)
     JuggernautSpeed.setPosition(35, 12)
 }
-function AssessBattle2 () {
+function AssessBattle2() {
     if (Battle == 1) {
         if (CurrentEnemy == 2) {
             controller.moveSprite(Hero, 0, 0)
@@ -1448,8 +1448,8 @@ function AssessBattle2 () {
             Enemy2HPcreate()
             Enemy2Speedcreate()
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 ........................
                 ..............ffffff....
                 .............f2feeeeff..
@@ -1474,7 +1474,7 @@ function AssessBattle2 () {
                 ........................
                 ........................
                 ........................
-                `,img`
+                `, img`
                 ........................
                 ..............fff.......
                 .............f2fffff....
@@ -1500,12 +1500,12 @@ function AssessBattle2 () {
                 ........................
                 ........................
                 `],
-            350,
-            true
+                350,
+                true
             )
             animation.runImageAnimation(
-            Enemy2,
-            [img`
+                Enemy2,
+                [img`
                 . . . . . . c c c c c c . . . . 
                 . . . . . c 6 5 5 5 5 6 c . . . 
                 . . . . c 5 5 5 5 5 5 5 5 c . . 
@@ -1522,7 +1522,7 @@ function AssessBattle2 () {
                 . . f c 6 6 6 6 6 1 1 1 1 1 6 f 
                 . . . f 6 6 6 1 1 1 1 1 1 6 f . 
                 . . . . f c c c c c c c c c . . 
-                `,img`
+                `, img`
                 . . . . . . . c c c c c c . . . 
                 . . . . . . c 6 5 5 5 5 6 c . . 
                 . . . . . c 5 5 5 5 5 5 5 5 c . 
@@ -1540,8 +1540,8 @@ function AssessBattle2 () {
                 . . c c 6 6 5 1 1 1 1 1 6 c . . 
                 . . . c c c c c c c c c c . . . 
                 `],
-            350,
-            true
+                350,
+                true
             )
             tiles.setCurrentTilemap(tilemap`層級2`)
             scene.centerCameraAt(150, 130)
@@ -1709,7 +1709,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairLarge, function (spr
     game.showLongText("這層戰鬥每回合將會受火屬性傷害", DialogLayout.Bottom)
     game.showLongText("此外敵我速度都會降低", DialogLayout.Bottom)
 })
-function Enemy3HPcreate () {
+function Enemy3HPcreate() {
     EnemyHP_3 = statusbars.create(40, 4, StatusBarKind.Health)
     EnemyHP_3.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
     EnemyHP_3.max = 400
@@ -1718,7 +1718,7 @@ function Enemy3HPcreate () {
     EnemyHP_3.setColor(10, 1)
     EnemyHP_3.setPosition(43, 5)
 }
-function AssessBattle4 () {
+function AssessBattle4() {
     if (Battle == 1) {
         if (CurrentEnemy == 4) {
             controller.moveSprite(Hero, 0, 0)
@@ -1728,8 +1728,8 @@ function AssessBattle4 () {
             BOSSHPcreate()
             BOSSSpeedCreate()
             animation.runImageAnimation(
-            Hero,
-            [img`
+                Hero,
+                [img`
                 ........................
                 ..............ffffff....
                 .............f2feeeeff..
@@ -1754,7 +1754,7 @@ function AssessBattle4 () {
                 ........................
                 ........................
                 ........................
-                `,img`
+                `, img`
                 ........................
                 ..............fff.......
                 .............f2fffff....
@@ -1780,12 +1780,12 @@ function AssessBattle4 () {
                 ........................
                 ........................
                 `],
-            350,
-            true
+                350,
+                true
             )
             animation.runImageAnimation(
-            BOSS1,
-            [img`
+                BOSS1,
+                [img`
                 ........22222...........
                 .......22555522.........
                 ......2255555522........
@@ -1810,7 +1810,7 @@ function AssessBattle4 () {
                 ...2555555555555552.....
                 ...225555555555522......
                 .....222222222222.......
-                `,img`
+                `, img`
                 ........22222...........
                 .......22555522.........
                 ......2255555522........
@@ -1835,7 +1835,7 @@ function AssessBattle4 () {
                 ...25555555555555522....
                 ...2255555555555222.....
                 .....222222222222.......
-                `,img`
+                `, img`
                 ........22222...........
                 .......22555522.2.......
                 ......225555552222......
@@ -1861,8 +1861,8 @@ function AssessBattle4 () {
                 ...22555555555555222....
                 .....222222222222.......
                 `],
-            200,
-            true
+                200,
+                true
             )
             tiles.setCurrentTilemap(tilemap`層級2`)
             scene.centerCameraAt(150, 130)
@@ -2035,8 +2035,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                 }
                 timer.after(500, function () {
                     animation.runImageAnimation(
-                    Hero,
-                    [img`
+                        Hero,
+                        [img`
                         ........................
                         ..............ffffff....
                         .............f2feeeeff..
@@ -2061,7 +2061,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         ........................
                         ........................
                         ........................
-                        `,img`
+                        `, img`
                         ........................
                         ..............fff.......
                         .............f2fffff....
@@ -2087,8 +2087,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         ........................
                         ........................
                         `],
-                    350,
-                    true
+                        350,
+                        true
                     )
                 })
             })
@@ -2120,8 +2120,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                 }
                 timer.after(500, function () {
                     animation.runImageAnimation(
-                    Hero,
-                    [img`
+                        Hero,
+                        [img`
                         ........................
                         ..............ffffff....
                         .............f2feeeeff..
@@ -2146,7 +2146,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         ........................
                         ........................
                         ........................
-                        `,img`
+                        `, img`
                         ........................
                         ..............fff.......
                         .............f2fffff....
@@ -2172,8 +2172,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         ........................
                         ........................
                         `],
-                    350,
-                    true
+                        350,
+                        true
                     )
                 })
             })
@@ -2205,8 +2205,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                 }
                 timer.after(500, function () {
                     animation.runImageAnimation(
-                    Hero,
-                    [img`
+                        Hero,
+                        [img`
                         ........................
                         ..............ffffff....
                         .............f2feeeeff..
@@ -2231,7 +2231,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         ........................
                         ........................
                         ........................
-                        `,img`
+                        `, img`
                         ........................
                         ..............fff.......
                         .............f2fffff....
@@ -2257,8 +2257,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         ........................
                         ........................
                         `],
-                    350,
-                    true
+                        350,
+                        true
                     )
                 })
             })
@@ -2290,8 +2290,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                 }
                 timer.after(500, function () {
                     animation.runImageAnimation(
-                    Hero,
-                    [img`
+                        Hero,
+                        [img`
                         ........................
                         ..............ffffff....
                         .............f2feeeeff..
@@ -2316,7 +2316,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         ........................
                         ........................
                         ........................
-                        `,img`
+                        `, img`
                         ........................
                         ..............fff.......
                         .............f2fffff....
@@ -2342,8 +2342,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         ........................
                         ........................
                         `],
-                    350,
-                    true
+                        350,
+                        true
                     )
                 })
             })
@@ -2382,8 +2382,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                     if (SP.value >= 36) {
                         blockMenu.closeMenu()
                         animation.runImageAnimation(
-                        Hero,
-                        [img`
+                            Hero,
+                            [img`
                             ................................
                             ................................
                             ................................
@@ -2416,7 +2416,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                             ................................
                             ................................
                             ................................
-                            `,img`
+                            `, img`
                             ................................
                             ................................
                             ................................
@@ -2449,7 +2449,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                             ................................
                             ................................
                             ................................
-                            `,img`
+                            `, img`
                             ................................
                             ................................
                             ................................
@@ -2482,7 +2482,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                             ................................
                             ................................
                             ................................
-                            `,img`
+                            `, img`
                             ................................
                             ................................
                             ......88........................
@@ -2515,7 +2515,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                             888...........................88
                             ...............................8
                             ................................
-                            `,img`
+                            `, img`
                             ................................
                             ................................
                             ................................
@@ -2548,7 +2548,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                             ................................
                             ................................
                             ................................
-                            `,img`
+                            `, img`
                             ................................
                             ................................
                             .............111111111..........
@@ -2581,7 +2581,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                             ............11111111............
                             ................................
                             ................................
-                            `,img`
+                            `, img`
                             .........1111111111111..........
                             .......111............111.......
                             ......11................11......
@@ -2615,8 +2615,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                             .............11111111111........
                             ................................
                             `],
-                        300,
-                        true
+                            300,
+                            true
                         )
                         music.play(music.melodyPlayable(music.magicWand), music.PlaybackMode.InBackground)
                         timer.after(1000, function () {
@@ -2661,8 +2661,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                             scene.cameraShake(3, 200)
                             music.play(music.melodyPlayable(music.beamUp), music.PlaybackMode.UntilDone)
                             animation.runImageAnimation(
-                            Juggernaut,
-                            [img`
+                                Juggernaut,
+                                [img`
                                 ................................
                                 ................................
                                 ................................
@@ -2688,8 +2688,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                                 .....dbce22222d.................
                                 ......ddeeeee...................
                                 `],
-                            200,
-                            true
+                                200,
+                                true
                             )
                             timer.after(100, function () {
                                 CrossCUT2 = sprites.createProjectileFromSprite(img`
@@ -2728,8 +2728,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                                     `, Hero, -150, 0)
                                 scaling.scaleToPercent(CrossCUT2, 250, ScaleDirection.Uniformly, ScaleAnchor.Middle)
                                 animation.runImageAnimation(
-                                Juggernaut,
-                                [img`
+                                    Juggernaut,
+                                    [img`
                                     ................................
                                     ................................
                                     ................................
@@ -2755,16 +2755,16 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                                     .....dbce22222d.................
                                     ......ddeeeee...................
                                     `],
-                                200,
-                                true
+                                    200,
+                                    true
                                 )
                                 JuggernautHP.value += -100 - Damage
                                 scene.cameraShake(5, 500)
                                 music.play(music.melodyPlayable(music.beamUp), music.PlaybackMode.UntilDone)
                                 timer.after(100, function () {
                                     animation.runImageAnimation(
-                                    Juggernaut,
-                                    [img`
+                                        Juggernaut,
+                                        [img`
                                         ........................
                                         .........bffffffdd......
                                         ........ffcffffffef.....
@@ -2797,7 +2797,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                                         .....c888668bddcc888d...
                                         .....d88888c............
                                         ........................
-                                        `,img`
+                                        `, img`
                                         ..........dddddd......
                                         .........efffccfffc...
                                         ........bffffffffef...
@@ -2831,8 +2831,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                                         ......b6b..........f..
                                         ......................
                                         `],
-                                    200,
-                                    true
+                                        200,
+                                        true
                                     )
                                 })
                             })
@@ -2841,8 +2841,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                 }
                 timer.after(1000, function () {
                     animation.runImageAnimation(
-                    Hero,
-                    [img`
+                        Hero,
+                        [img`
                         ........................
                         ..............ffffff....
                         .............f2feeeeff..
@@ -2867,7 +2867,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         ........................
                         ........................
                         ........................
-                        `,img`
+                        `, img`
                         ........................
                         ..............fff.......
                         .............f2fffff....
@@ -2893,15 +2893,15 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         ........................
                         ........................
                         `],
-                    350,
-                    true
+                        350,
+                        true
                     )
                 })
             })
         }
     }
 })
-function Enemy2HPcreate () {
+function Enemy2HPcreate() {
     EnemyHP_2 = statusbars.create(40, 4, StatusBarKind.Health)
     EnemyHP_2.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
     EnemyHP_2.max = 100
@@ -3057,8 +3057,8 @@ game.onUpdateInterval(100, function () {
                         Enemy1.setPosition(180, 135)
                         HP.value += -30
                         animation.runImageAnimation(
-                        Enemy1,
-                        [img`
+                            Enemy1,
+                            [img`
                             . . . . c c c c c c c . . . . . 
                             . . . c 6 7 7 7 7 7 6 c . . . . 
                             . . c 6 7 c 6 6 6 6 c 7 c . . . 
@@ -3075,7 +3075,7 @@ game.onUpdateInterval(100, function () {
                             . . c 6 6 6 6 6 6 1 1 1 1 1 6 f 
                             . . . c 6 6 6 6 1 1 1 1 1 6 f . 
                             . . . . c c c c c c c c f f . . 
-                            `,img`
+                            `, img`
                             . . . c c c c c c c . . . . . . 
                             . . c 7 f f 6 6 f f c . . . . . 
                             . c 6 7 6 6 6 6 6 6 7 c . . . . 
@@ -3092,7 +3092,7 @@ game.onUpdateInterval(100, function () {
                             . . c 6 6 6 6 6 6 1 1 1 1 1 6 f 
                             . . . c 6 6 6 6 6 1 1 1 1 6 f . 
                             . . . . c c c c c c c c f f . . 
-                            `,img`
+                            `, img`
                             . . . c c c c c c c . . . . . . 
                             . . c 7 f f 6 6 f f c . . . . . 
                             . c 6 7 6 6 6 6 6 6 7 c . . . . 
@@ -3109,7 +3109,7 @@ game.onUpdateInterval(100, function () {
                             . . c 6 6 6 6 6 6 1 1 1 1 1 6 f 
                             . . . c 6 6 6 6 6 1 1 1 1 6 f . 
                             . . . . c c c c c c c c f f . . 
-                            `,img`
+                            `, img`
                             . . . . . . . . . . . . . . . . 
                             . . . . . . . . . . . . . . . . 
                             c c c c c . . . . . . . . . . . 
@@ -3126,7 +3126,7 @@ game.onUpdateInterval(100, function () {
                             c 6 6 6 f 7 7 7 6 f 6 6 f 6 7 f 
                             . c c 6 6 f 6 7 c 1 f f c 1 c . 
                             . . . c c c c c c c c c c c c . 
-                            `,img`
+                            `, img`
                             c c c c c . . . . . . . . . . . 
                             c 6 7 7 7 c c . . . . . . . . . 
                             . c c 7 7 7 c c . . . . . . . . 
@@ -3143,7 +3143,7 @@ game.onUpdateInterval(100, function () {
                             . c 6 6 f 6 7 7 7 7 7 7 7 7 f . 
                             . c c 6 6 f 6 7 c 1 f f c 1 c . 
                             . . . c c c c c c c c c c c c . 
-                            `,img`
+                            `, img`
                             c c c c c . . . . . . . . . . . 
                             c 6 7 7 7 c c . . . . . . . . . 
                             . c c 7 7 7 c c . . . . . . . . 
@@ -3161,12 +3161,12 @@ game.onUpdateInterval(100, function () {
                             . c c 6 6 f 6 7 c 1 f f c 1 c . 
                             . . . c c c c c c c c c c c c . 
                             `],
-                        800,
-                        true
+                            800,
+                            true
                         )
                         animation.runImageAnimation(
-                        Hero,
-                        [img`
+                            Hero,
+                            [img`
                             ........................
                             ........................
                             ........................
@@ -3191,7 +3191,7 @@ game.onUpdateInterval(100, function () {
                             .............feeefefeff.
                             ..............feffffff..
                             ...............fff......
-                            `,img`
+                            `, img`
                             ........................
                             ..............fff.......
                             .............f2fffff....
@@ -3217,8 +3217,8 @@ game.onUpdateInterval(100, function () {
                             ........................
                             ........................
                             `],
-                        800,
-                        true
+                            800,
+                            true
                         )
                         music.play(music.createSoundEffect(WaveShape.Noise, 3300, 1400, 255, 0, 400, SoundExpressionEffect.Tremolo, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
                         scene.cameraShake(4, 1000)
@@ -3226,8 +3226,8 @@ game.onUpdateInterval(100, function () {
                             EnemySpeed_1.value = 0
                             Enemy1.setPosition(90, 135)
                             animation.runImageAnimation(
-                            Enemy1,
-                            [img`
+                                Enemy1,
+                                [img`
                                 . . . . . . c c c c c c . . . . 
                                 . . . . . c 6 7 7 7 7 6 c . . . 
                                 . . . . c 7 7 7 7 7 7 7 7 c . . 
@@ -3244,7 +3244,7 @@ game.onUpdateInterval(100, function () {
                                 . . f c 6 6 6 6 6 1 1 1 1 1 6 f 
                                 . . . f 6 6 6 1 1 1 1 1 1 6 f . 
                                 . . . . f c c c c c c c c c . . 
-                                `,img`
+                                `, img`
                                 . . . . . . . c c c c c c . . . 
                                 . . . . . . c 6 7 7 7 7 6 c . . 
                                 . . . . . c 7 7 7 7 7 7 7 7 c . 
@@ -3262,12 +3262,12 @@ game.onUpdateInterval(100, function () {
                                 . . c c 6 6 7 1 1 1 1 1 6 c . . 
                                 . . . c c c c c c c c c c . . . 
                                 `],
-                            350,
-                            true
+                                350,
+                                true
                             )
                             animation.runImageAnimation(
-                            Hero,
-                            [img`
+                                Hero,
+                                [img`
                                 ........................
                                 ..............ffffff....
                                 .............f2feeeeff..
@@ -3292,7 +3292,7 @@ game.onUpdateInterval(100, function () {
                                 ........................
                                 ........................
                                 ........................
-                                `,img`
+                                `, img`
                                 ........................
                                 ..............fff.......
                                 .............f2fffff....
@@ -3318,8 +3318,8 @@ game.onUpdateInterval(100, function () {
                                 ........................
                                 ........................
                                 `],
-                            350,
-                            true
+                                350,
+                                true
                             )
                         })
                     })
@@ -3364,8 +3364,8 @@ game.onUpdateInterval(100, function () {
                         Enemy2.setPosition(180, 135)
                         HP.value += -50
                         animation.runImageAnimation(
-                        Enemy2,
-                        [img`
+                            Enemy2,
+                            [img`
                             . . . . c c c c c c c . . . . . 
                             . . . c 6 5 5 5 5 5 6 c . . . . 
                             . . c 6 5 c 6 6 6 6 c 5 c . . . 
@@ -3382,7 +3382,7 @@ game.onUpdateInterval(100, function () {
                             . . c 6 6 6 6 6 6 1 1 1 1 1 6 f 
                             . . . c 6 6 6 6 1 1 1 1 1 6 f . 
                             . . . . c c c c c c c c f f . . 
-                            `,img`
+                            `, img`
                             . . . c c c c c c c . . . . . . 
                             . . c 5 f f 6 6 f f c . . . . . 
                             . c 6 5 6 6 6 6 6 6 5 c . . . . 
@@ -3399,7 +3399,7 @@ game.onUpdateInterval(100, function () {
                             . . c 6 6 6 6 6 6 1 1 1 1 1 6 f 
                             . . . c 6 6 6 6 6 1 1 1 1 6 f . 
                             . . . . c c c c c c c c f f . . 
-                            `,img`
+                            `, img`
                             . . . c c c c c c c . . . . . . 
                             . . c 5 f f 6 6 f f c . . . . . 
                             . c 6 5 6 6 6 6 6 6 5 c . . . . 
@@ -3416,7 +3416,7 @@ game.onUpdateInterval(100, function () {
                             . . c 6 6 6 6 6 6 1 1 1 1 1 6 f 
                             . . . c 6 6 6 6 6 1 1 1 1 6 f . 
                             . . . . c c c c c c c c f f . . 
-                            `,img`
+                            `, img`
                             . . . . . . . . . . . . . . . . 
                             . . . . . . . . . . . . . . . . 
                             c c c c c . . . . . . . . . . . 
@@ -3433,7 +3433,7 @@ game.onUpdateInterval(100, function () {
                             c 6 6 6 f 5 5 5 6 f 6 6 f 6 5 f 
                             . c c 6 6 f 6 5 c 1 f f c 1 c . 
                             . . . c c c c c c c c c c c c . 
-                            `,img`
+                            `, img`
                             c c c c c . . . . . . . . . . . 
                             c 6 5 5 5 c c . . . . . . . . . 
                             . c c 5 5 5 c c . . . . . . . . 
@@ -3450,7 +3450,7 @@ game.onUpdateInterval(100, function () {
                             . c 6 6 f 6 5 5 5 5 5 5 5 5 f . 
                             . c c 6 6 f 6 5 c 1 f f c 1 c . 
                             . . . c c c c c c c c c c c c . 
-                            `,img`
+                            `, img`
                             c c c c c . . . . . . . . . . . 
                             c 6 5 5 5 c c . . . . . . . . . 
                             . c c 5 5 5 c c . . . . . . . . 
@@ -3468,12 +3468,12 @@ game.onUpdateInterval(100, function () {
                             . c c 6 6 f 6 5 c 1 f f c 1 c . 
                             . . . c c c c c c c c c c c c . 
                             `],
-                        800,
-                        true
+                            800,
+                            true
                         )
                         animation.runImageAnimation(
-                        Hero,
-                        [img`
+                            Hero,
+                            [img`
                             ........................
                             ........................
                             ........................
@@ -3498,7 +3498,7 @@ game.onUpdateInterval(100, function () {
                             .............feeefefeff.
                             ..............feffffff..
                             ...............fff......
-                            `,img`
+                            `, img`
                             ........................
                             ..............fff.......
                             .............f2fffff....
@@ -3524,8 +3524,8 @@ game.onUpdateInterval(100, function () {
                             ........................
                             ........................
                             `],
-                        800,
-                        true
+                            800,
+                            true
                         )
                         music.play(music.createSoundEffect(WaveShape.Noise, 3300, 1400, 255, 0, 400, SoundExpressionEffect.Tremolo, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
                         scene.cameraShake(4, 1000)
@@ -3533,8 +3533,8 @@ game.onUpdateInterval(100, function () {
                             EnemySpeed_2.value = 0
                             Enemy2.setPosition(90, 135)
                             animation.runImageAnimation(
-                            Enemy2,
-                            [img`
+                                Enemy2,
+                                [img`
                                 . . . . . . c c c c c c . . . . 
                                 . . . . . c 6 5 5 5 5 6 c . . . 
                                 . . . . c 5 5 5 5 5 5 5 5 c . . 
@@ -3551,7 +3551,7 @@ game.onUpdateInterval(100, function () {
                                 . . f c 6 6 6 6 6 1 1 1 1 1 6 f 
                                 . . . f 6 6 6 1 1 1 1 1 1 6 f . 
                                 . . . . f c c c c c c c c c . . 
-                                `,img`
+                                `, img`
                                 . . . . . . . c c c c c c . . . 
                                 . . . . . . c 6 5 5 5 5 6 c . . 
                                 . . . . . c 5 5 5 5 5 5 5 5 c . 
@@ -3569,12 +3569,12 @@ game.onUpdateInterval(100, function () {
                                 . . c c 6 6 5 1 1 1 1 1 6 c . . 
                                 . . . c c c c c c c c c c . . . 
                                 `],
-                            350,
-                            true
+                                350,
+                                true
                             )
                             animation.runImageAnimation(
-                            Hero,
-                            [img`
+                                Hero,
+                                [img`
                                 ........................
                                 ..............ffffff....
                                 .............f2feeeeff..
@@ -3599,7 +3599,7 @@ game.onUpdateInterval(100, function () {
                                 ........................
                                 ........................
                                 ........................
-                                `,img`
+                                `, img`
                                 ........................
                                 ..............fff.......
                                 .............f2fffff....
@@ -3625,8 +3625,8 @@ game.onUpdateInterval(100, function () {
                                 ........................
                                 ........................
                                 `],
-                            350,
-                            true
+                                350,
+                                true
                             )
                         })
                     })
@@ -3671,8 +3671,8 @@ game.onUpdateInterval(100, function () {
                         Enemy3.setPosition(170, 135)
                         HP.value += -50
                         animation.runImageAnimation(
-                        Enemy3,
-                        [img`
+                            Enemy3,
+                            [img`
                             ........................
                             ........................
                             ...........ccc..........
@@ -3697,7 +3697,7 @@ game.onUpdateInterval(100, function () {
                             ....ccbbcbddddccdddcc...
                             ......cccdd555dcccccc...
                             ........cccccccc........
-                            `,img`
+                            `, img`
                             .........ccc............
                             .........cccccccc.......
                             ......cc..cc55555cc.....
@@ -3722,7 +3722,7 @@ game.onUpdateInterval(100, function () {
                             ...cccbbcbddddccdddcc...
                             ......cccdd555dcccccc...
                             ........cccccccc........
-                            `,img`
+                            `, img`
                             ........ccc.............
                             ........cccccccc........
                             .....cc..cc55555cc......
@@ -3747,7 +3747,7 @@ game.onUpdateInterval(100, function () {
                             ccccccbbcbddddccdddcc...
                             ......cccdd555dcccccc...
                             ........cccccccc........
-                            `,img`
+                            `, img`
                             ........................
                             ........................
                             ........................
@@ -3772,7 +3772,7 @@ game.onUpdateInterval(100, function () {
                             ...ccbbbcbddddccdddc....
                             .....ccccdd555dccccc....
                             ........cccccccc........
-                            `,img`
+                            `, img`
                             ........................
                             ........................
                             ........................
@@ -3797,7 +3797,7 @@ game.onUpdateInterval(100, function () {
                             ...ccbbbcbddddccdddc....
                             .....ccccdd555dccccc....
                             ........cccccccc........
-                            `,img`
+                            `, img`
                             ........................
                             ........................
                             ........................
@@ -3823,12 +3823,12 @@ game.onUpdateInterval(100, function () {
                             .....ccccdd555dccccc....
                             ........cccccccc........
                             `],
-                        800,
-                        true
+                            800,
+                            true
                         )
                         animation.runImageAnimation(
-                        Hero,
-                        [img`
+                            Hero,
+                            [img`
                             ........................
                             ........................
                             ........................
@@ -3853,7 +3853,7 @@ game.onUpdateInterval(100, function () {
                             .............feeefefeff.
                             ..............feffffff..
                             ...............fff......
-                            `,img`
+                            `, img`
                             ........................
                             ..............fff.......
                             .............f2fffff....
@@ -3879,8 +3879,8 @@ game.onUpdateInterval(100, function () {
                             ........................
                             ........................
                             `],
-                        800,
-                        true
+                            800,
+                            true
                         )
                         music.play(music.createSoundEffect(WaveShape.Noise, 3300, 1400, 255, 0, 400, SoundExpressionEffect.Tremolo, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
                         scene.cameraShake(4, 1000)
@@ -3888,8 +3888,8 @@ game.onUpdateInterval(100, function () {
                             EnemySpeed_3.value = 0
                             Enemy3.setPosition(90, 135)
                             animation.runImageAnimation(
-                            Enemy3,
-                            [img`
+                                Enemy3,
+                                [img`
                                 . . . . . . . . . . . . . . . . 
                                 . . . . . . . . c c c c . . . . 
                                 . . . . . . c c 5 5 5 5 c c . . 
@@ -3906,7 +3906,7 @@ game.onUpdateInterval(100, function () {
                                 . c d d d b 5 5 d c c c c . . . 
                                 . . c c c b 5 5 b c c c c c . . 
                                 . . . . c b 5 5 d c b b b c . . 
-                                `,img`
+                                `, img`
                                 . . . . . . . c c c c c . . . . 
                                 . . . . . . c 5 5 5 5 5 c c . . 
                                 . . . . . c 5 5 f 1 5 5 5 5 c . 
@@ -3923,7 +3923,7 @@ game.onUpdateInterval(100, function () {
                                 . . c c c b b 5 5 d c . . . . . 
                                 . . . . . c c c c c c c . . . . 
                                 . . . . . . . c b b b c . . . . 
-                                `,img`
+                                `, img`
                                 . . . . . . . c c c c c . . . . 
                                 . . . . . . c 5 5 5 5 5 c c . . 
                                 . . . . . c 5 5 f 1 5 5 5 5 c . 
@@ -3940,7 +3940,7 @@ game.onUpdateInterval(100, function () {
                                 . . . c c c b b 5 5 d c . . . . 
                                 . . . . . c c c c c c c . . . . 
                                 . . . . . . . c b b b c . . . . 
-                                `,img`
+                                `, img`
                                 . . . . . . . c c c c c . . . . 
                                 . . . . . . c 5 5 5 5 5 c c . . 
                                 . . . . . c 5 5 f 1 5 5 5 5 c . 
@@ -3957,7 +3957,7 @@ game.onUpdateInterval(100, function () {
                                 c c c c c c b b 5 5 b c . . . . 
                                 . . . . . . c c c c c c . . . . 
                                 . . . . . . c b b b c . . . . . 
-                                `,img`
+                                `, img`
                                 . . . . . . . . . . . . . . . . 
                                 . . . . . . . . c c c c . . . . 
                                 . . . . . . c c 5 5 5 5 c c . . 
@@ -3974,7 +3974,7 @@ game.onUpdateInterval(100, function () {
                                 c c d d d b 5 5 d c c c c . . . 
                                 . . c c c b 5 5 b c c b c . . . 
                                 . . . . . c b 5 5 d c c c . . . 
-                                `,img`
+                                `, img`
                                 . . . . . . . . . . . . . . . . 
                                 . . . . . . . . c c c c . . . . 
                                 . . . . . . c c 5 5 5 5 c c . . 
@@ -3992,12 +3992,12 @@ game.onUpdateInterval(100, function () {
                                 . . . c c b 5 5 c c c b b c . . 
                                 . . . . . c 5 5 d c c c c c . . 
                                 `],
-                            350,
-                            true
+                                350,
+                                true
                             )
                             animation.runImageAnimation(
-                            Hero,
-                            [img`
+                                Hero,
+                                [img`
                                 ........................
                                 ..............ffffff....
                                 .............f2feeeeff..
@@ -4022,7 +4022,7 @@ game.onUpdateInterval(100, function () {
                                 ........................
                                 ........................
                                 ........................
-                                `,img`
+                                `, img`
                                 ........................
                                 ..............fff.......
                                 .............f2fffff....
@@ -4048,8 +4048,8 @@ game.onUpdateInterval(100, function () {
                                 ........................
                                 ........................
                                 `],
-                            350,
-                            true
+                                350,
+                                true
                             )
                         })
                     })
@@ -4094,8 +4094,8 @@ game.onUpdateInterval(100, function () {
                         BOSS1.setPosition(170, 135)
                         HP.value += -100
                         animation.runImageAnimation(
-                        BOSS1,
-                        [img`
+                            BOSS1,
+                            [img`
                             ...........222..........
                             .......222555222........
                             ...2.22555555555222222..
@@ -4120,7 +4120,7 @@ game.onUpdateInterval(100, function () {
                             222555555555555555555522
                             ..222225555555552222222.
                             ......22222222222.......
-                            `,img`
+                            `, img`
                             .........22222..........
                             ......22225552222.......
                             ......255555555522......
@@ -4146,12 +4146,12 @@ game.onUpdateInterval(100, function () {
                             ......22222552222222522.
                             ..........2222......22..
                             `],
-                        800,
-                        true
+                            800,
+                            true
                         )
                         animation.runImageAnimation(
-                        Hero,
-                        [img`
+                            Hero,
+                            [img`
                             ........................
                             ........................
                             ........................
@@ -4176,7 +4176,7 @@ game.onUpdateInterval(100, function () {
                             .............feeefefeff.
                             ..............feffffff..
                             ...............fff......
-                            `,img`
+                            `, img`
                             ........................
                             ..............fff.......
                             .............f2fffff....
@@ -4202,8 +4202,8 @@ game.onUpdateInterval(100, function () {
                             ........................
                             ........................
                             `],
-                        800,
-                        true
+                            800,
+                            true
                         )
                         music.play(music.createSoundEffect(WaveShape.Noise, 3300, 1400, 255, 0, 400, SoundExpressionEffect.Tremolo, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
                         scene.cameraShake(4, 1000)
@@ -4211,8 +4211,8 @@ game.onUpdateInterval(100, function () {
                             BOSSSpeed_1.value = 0
                             BOSS1.setPosition(90, 135)
                             animation.runImageAnimation(
-                            BOSS1,
-                            [img`
+                                BOSS1,
+                                [img`
                                 ........22222...........
                                 .......22555522.........
                                 ......2255555522........
@@ -4237,7 +4237,7 @@ game.onUpdateInterval(100, function () {
                                 ...2555555555555552.....
                                 ...225555555555522......
                                 .....222222222222.......
-                                `,img`
+                                `, img`
                                 ........22222...........
                                 .......22555522.........
                                 ......2255555522........
@@ -4262,7 +4262,7 @@ game.onUpdateInterval(100, function () {
                                 ...25555555555555522....
                                 ...2255555555555222.....
                                 .....222222222222.......
-                                `,img`
+                                `, img`
                                 ........22222...........
                                 .......22555522.2.......
                                 ......225555552222......
@@ -4288,12 +4288,12 @@ game.onUpdateInterval(100, function () {
                                 ...22555555555555222....
                                 .....222222222222.......
                                 `],
-                            200,
-                            true
+                                200,
+                                true
                             )
                             animation.runImageAnimation(
-                            Hero,
-                            [img`
+                                Hero,
+                                [img`
                                 ........................
                                 ..............ffffff....
                                 .............f2feeeeff..
@@ -4318,7 +4318,7 @@ game.onUpdateInterval(100, function () {
                                 ........................
                                 ........................
                                 ........................
-                                `,img`
+                                `, img`
                                 ........................
                                 ..............fff.......
                                 .............f2fffff....
@@ -4344,8 +4344,8 @@ game.onUpdateInterval(100, function () {
                                 ........................
                                 ........................
                                 `],
-                            350,
-                            true
+                                350,
+                                true
                             )
                         })
                     })
@@ -4423,8 +4423,8 @@ game.onUpdateInterval(100, function () {
                     if (FireRistent == 0) {
                         timer.throttle("ChooseAction", 6000, function () {
                             animation.runImageAnimation(
-                            Hero,
-                            [img`
+                                Hero,
+                                [img`
                                 ........................
                                 ........................
                                 ........................
@@ -4449,7 +4449,7 @@ game.onUpdateInterval(100, function () {
                                 ..224445555fff5555544442
                                 ...222444444444444444442
                                 .....222222222222222222.
-                                `,img`
+                                `, img`
                                 ........................
                                 ........................
                                 ..............ccc.......
@@ -4474,7 +4474,7 @@ game.onUpdateInterval(100, function () {
                                 ...21444555555555555442.
                                 ....2224444444444444422.
                                 ......222222222222222...
-                                `,img`
+                                `, img`
                                 ........................
                                 ..............ccc.......
                                 .............cddc.......
@@ -4499,7 +4499,7 @@ game.onUpdateInterval(100, function () {
                                 ..245555555555555555542.
                                 .24444444444444444444422
                                 222222222222222222222222
-                                `,img`
+                                `, img`
                                 .............ccc........
                                 ............cddc........
                                 ...........cddc.........
@@ -4524,7 +4524,7 @@ game.onUpdateInterval(100, function () {
                                 ........................
                                 ........................
                                 ........................
-                                `,img`
+                                `, img`
                                 ........................
                                 ........................
                                 ..............ccc.......
@@ -4549,7 +4549,7 @@ game.onUpdateInterval(100, function () {
                                 ........................
                                 ........................
                                 ........................
-                                `,img`
+                                `, img`
                                 ........................
                                 ........................
                                 ........................
@@ -4574,7 +4574,7 @@ game.onUpdateInterval(100, function () {
                                 ...........fff..........
                                 ........................
                                 ........................
-                                `,img`
+                                `, img`
                                 ........................
                                 ........................
                                 ........................
@@ -4600,14 +4600,14 @@ game.onUpdateInterval(100, function () {
                                 ..........feffffff......
                                 ...........fff..........
                                 `],
-                            250,
-                            false
+                                250,
+                                false
                             )
                             HP.value += -200
                             timer.after(300, function () {
                                 animation.runImageAnimation(
-                                Hero,
-                                [img`
+                                    Hero,
+                                    [img`
                                     ........................
                                     ..............ffffff....
                                     .............f2feeeeff..
@@ -4632,7 +4632,7 @@ game.onUpdateInterval(100, function () {
                                     ........................
                                     ........................
                                     ........................
-                                    `,img`
+                                    `, img`
                                     ........................
                                     ..............fff.......
                                     .............f2fffff....
@@ -4658,8 +4658,8 @@ game.onUpdateInterval(100, function () {
                                     ........................
                                     ........................
                                     `],
-                                350,
-                                false
+                                    350,
+                                    false
                                 )
                             })
                             blockMenu.showMenu(["攻擊", "治癒", "十字斬"], MenuStyle.List, MenuLocation.BottomHalf)
@@ -4718,8 +4718,8 @@ game.onUpdateInterval(100, function () {
                             scaling.scaleToPercent(FirstCUT, 300, ScaleDirection.Vertically, ScaleAnchor.Middle)
                             HP.value += -100
                             animation.runImageAnimation(
-                            Juggernaut,
-                            [img`
+                                Juggernaut,
+                                [img`
                                 ......dddddd...........
                                 .....dfffccfccc........
                                 .....ffffffffefd.......
@@ -4751,7 +4751,7 @@ game.onUpdateInterval(100, function () {
                                 .....c8888b............
                                 ......8888b............
                                 .......................
-                                `,img`
+                                `, img`
                                 ....efffffe.........
                                 ...bfffffffff.......
                                 ..cfffffcffcfd......
@@ -4783,7 +4783,7 @@ game.onUpdateInterval(100, function () {
                                 .d8ccddd.dc8888d....
                                 ..dd....ddc8888d....
                                 ..........d8bbb.....
-                                `,img`
+                                `, img`
                                 ..........................
                                 .....fffccc...............
                                 ....ffffffffff..........bd
@@ -4816,12 +4816,12 @@ game.onUpdateInterval(100, function () {
                                 .....8888.................
                                 .....898b.................
                                 `],
-                            800,
-                            true
+                                800,
+                                true
                             )
                             animation.runImageAnimation(
-                            Hero,
-                            [img`
+                                Hero,
+                                [img`
                                 ........................
                                 ........................
                                 ........................
@@ -4846,7 +4846,7 @@ game.onUpdateInterval(100, function () {
                                 .............feeefefeff.
                                 ..............feffffff..
                                 ...............fff......
-                                `,img`
+                                `, img`
                                 ........................
                                 ..............fff.......
                                 .............f2fffff....
@@ -4872,8 +4872,8 @@ game.onUpdateInterval(100, function () {
                                 ........................
                                 ........................
                                 `],
-                            2000,
-                            true
+                                2000,
+                                true
                             )
                             scene.cameraShake(2, 200)
                             timer.after(800, function () {
@@ -4915,8 +4915,8 @@ game.onUpdateInterval(100, function () {
                                 scaling.scaleToPercent(SecondCUT, 300, ScaleDirection.Horizontally, ScaleAnchor.Middle)
                                 HP.value += -100
                                 animation.runImageAnimation(
-                                Juggernaut,
-                                [img`
+                                    Juggernaut,
+                                    [img`
                                     ......ddd........
                                     ..bffffffc.......
                                     ..ffffffffd......
@@ -4946,7 +4946,7 @@ game.onUpdateInterval(100, function () {
                                     ..8888cbb...888..
                                     ..8888bd....ddd..
                                     ..698d...........
-                                    `,img`
+                                    `, img`
                                     .....................
                                     ...cfffffbdd.........
                                     ..bfcfffffcfc........
@@ -4977,14 +4977,14 @@ game.onUpdateInterval(100, function () {
                                     .c866888ccccc8888b...
                                     .c88888cfffcfc886b...
                                     `],
-                                500,
-                                true
+                                    500,
+                                    true
                                 )
                                 scene.cameraShake(2, 200)
                                 timer.after(800, function () {
                                     animation.runImageAnimation(
-                                    Juggernaut,
-                                    [img`
+                                        Juggernaut,
+                                        [img`
                                         .dbbbbbddd..........
                                         dcffffffccb.........
                                         cfffffffffcd........
@@ -5015,7 +5015,7 @@ game.onUpdateInterval(100, function () {
                                         d666888ccccc8886....
                                         1b8688ccccbbbbdd....
                                         1b888cddd...........
-                                        `,img`
+                                        `, img`
                                         .....................1111
                                         .....................1111
                                         ...ffffffccc........d1111
@@ -5049,8 +5049,8 @@ game.onUpdateInterval(100, function () {
                                         ..f888...................
                                         ...ddd...................
                                         `],
-                                    500,
-                                    true
+                                        500,
+                                        true
                                     )
                                     timer.after(800, function () {
                                         music.play(music.melodyPlayable(music.beamUp), music.PlaybackMode.InBackground)
@@ -5090,8 +5090,8 @@ game.onUpdateInterval(100, function () {
                                             `, Juggernaut, 150, 0)
                                         scaling.scaleToPercent(ThirdCUT, 400, ScaleDirection.Uniformly, ScaleAnchor.Middle)
                                         animation.runImageAnimation(
-                                        Juggernaut,
-                                        [img`
+                                            Juggernaut,
+                                            [img`
                                             ...........dffffffccc.............
                                             ...........ffefffffefb............
                                             .........dffffff4eccfc............
@@ -5120,7 +5120,7 @@ game.onUpdateInterval(100, function () {
                                             fd.............8868c..............
                                             ...............b888c..............
                                             ..................................
-                                            `,img`
+                                            `, img`
                                             ..dffffffbbd..........
                                             .dcffffffffcd.........
                                             dcfffffeffffd.........
@@ -5151,7 +5151,7 @@ game.onUpdateInterval(100, function () {
                                             .bc8666......bbbb.....
                                             .bc88bd...............
                                             ..d6bb................
-                                            `,img`
+                                            `, img`
                                             ....................
                                             ..dbbbebbd..........
                                             ..cffffffcccbd......
@@ -5184,7 +5184,7 @@ game.onUpdateInterval(100, function () {
                                             ..dc8688b.....dbbd..
                                             ...c888b............
                                             ...dddbd............
-                                            `,img`
+                                            `, img`
                                             .....dcffffffccb.......
                                             ....bcffffffffffd......
                                             ...dcfffffe4ecefd......
@@ -5214,7 +5214,7 @@ game.onUpdateInterval(100, function () {
                                             ......d66688bbbbbc886d.
                                             ......d86666d....dddd..
                                             ......d88888d..........
-                                            `,img`
+                                            `, img`
                                             .....dcffffffccb.......
                                             ....bcffffffffffd......
                                             ...dcfffffe4ecefd......
@@ -5245,8 +5245,8 @@ game.onUpdateInterval(100, function () {
                                             ......d86666d....dddd..
                                             ......d88888d..........
                                             `],
-                                        800,
-                                        true
+                                            800,
+                                            true
                                         )
                                         HP.value += -200
                                         scene.cameraShake(2, 200)
@@ -5256,8 +5256,8 @@ game.onUpdateInterval(100, function () {
                                     sprites.destroy(JuggernautSkillName, effects.none, 100)
                                     JuggernautSpeed.value = 0
                                     animation.runImageAnimation(
-                                    Juggernaut,
-                                    [img`
+                                        Juggernaut,
+                                        [img`
                                         ........................
                                         .........bffffffdd......
                                         ........ffcffffffef.....
@@ -5290,7 +5290,7 @@ game.onUpdateInterval(100, function () {
                                         .....c888668bddcc888d...
                                         .....d88888c............
                                         ........................
-                                        `,img`
+                                        `, img`
                                         ..........dddddd......
                                         .........efffccfffc...
                                         ........bffffffffef...
@@ -5324,12 +5324,12 @@ game.onUpdateInterval(100, function () {
                                         ......b6b..........f..
                                         ......................
                                         `],
-                                    200,
-                                    true
+                                        200,
+                                        true
                                     )
                                     animation.runImageAnimation(
-                                    Hero,
-                                    [img`
+                                        Hero,
+                                        [img`
                                         ........................
                                         ..............ffffff....
                                         .............f2feeeeff..
@@ -5354,7 +5354,7 @@ game.onUpdateInterval(100, function () {
                                         ........................
                                         ........................
                                         ........................
-                                        `,img`
+                                        `, img`
                                         ........................
                                         ..............fff.......
                                         .............f2fffff....
@@ -5380,8 +5380,8 @@ game.onUpdateInterval(100, function () {
                                         ........................
                                         ........................
                                         `],
-                                    350,
-                                    true
+                                        350,
+                                        true
                                     )
                                 })
                             })
@@ -5429,3 +5429,4 @@ game.onUpdateInterval(100, function () {
         }
     }
 })
+
