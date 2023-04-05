@@ -5671,11 +5671,11 @@ game.onUpdateInterval(100, function () {
                 CurrentWeapon = "神劍"
             }
             if (Hero.overlapsWith(Juggernaut)) {
-                if (Battle = 0) {
+                
                     Battle = 1
                     CurrentEnemy = 5
                     AssessBattle5()
-                }
+                
 
 
             }
