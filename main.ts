@@ -2,6 +2,10 @@
 作品:RPG速通地下城正式版v1.0
 作者:30321蔡宇倫
 日期2023/4/5
+遊戲招式說明:
+*治癒:使自身恢復HP(隨等級增長而增加治癒量)[開局即有]
+*十字斬:對敵人造成兩次傷害(基於自身傷害)[達到5級]
+*血刃之咒:提升傷害1.5倍持續3回合(不可疊加)[達到20級]
 */
 function Walk() {
     if (Battle == 0) {
@@ -11100,7 +11104,7 @@ game.onUpdateInterval(100, function () {
                                 })
                             })
                         }
-                    }else {
+                    } else {
                         RandomAttack = 3
                     }
 
@@ -11109,4 +11113,3 @@ game.onUpdateInterval(100, function () {
         }
     }
 })
-
