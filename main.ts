@@ -589,8 +589,8 @@ function BOSS2SPcreate() {
 function BOSS2HPcreate() {
     BOSSHP_2 = statusbars.create(40, 4, StatusBarKind.Health)
     BOSSHP_2.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
-    BOSSHP_2.max = 50000
-    BOSSHP_2.value = 50000
+    BOSSHP_2.max = 25000
+    BOSSHP_2.value = 25000
     BOSSHP_2.setLabel("HP")
     BOSSHP_2.setColor(4, 1)
     BOSSHP_2.setPosition(43, 5)
@@ -1719,14 +1719,14 @@ function Scene1F() {
         ......2225555555552222..
         .........2222222222.....
         `, SpriteKind.Enemy)
-    tiles.placeOnTile(Hero, tiles.getTileLocation(0, 0))
+    tiles.placeOnTile(Hero, tiles.getTileLocation(14, 2))
     tiles.placeOnTile(Enemy1, tiles.getTileLocation(5, 8))
     tiles.placeOnTile(Enemy2, tiles.getTileLocation(6, 1))
     tiles.placeOnTile(Enemy3, tiles.getTileLocation(12, 3))
     tiles.placeOnTile(treasure1, tiles.getTileLocation(4, 15))
     tiles.placeOnTile(treasure2, tiles.getTileLocation(6, 0))
     tiles.placeOnTile(treasure3, tiles.getTileLocation(12, 2))
-    tiles.placeOnTile(BOSS1, tiles.getTileLocation(14, 1))
+    tiles.placeOnTile(BOSS1, tiles.getTileLocation(14, 5))
     scene.cameraFollowSprite(Hero)
     controller.moveSprite(Hero, 100, 100)
 }
@@ -1877,7 +1877,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairLarge, function (spr
     if (Scene == 2) {
         tiles.setCurrentTilemap(tilemap`層級10`)
     }
-    tiles.placeOnTile(Hero, tiles.getTileLocation(14, 0))
+    tiles.placeOnTile(Hero, tiles.getTileLocation(0, 10))
     GodSword = sprites.create(img`
         ...............................
         dd.............................
@@ -2711,7 +2711,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         }
         if (CurrentEnemy == 5) {
             timer.throttle("AttackAction", 6000, function () {
-                if (option == "攻擊") {
+                if (option == "攻擊" && HEROspeed.value >= 100) {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     if (JuggernautHP.value >= 1500) {
@@ -2729,7 +2729,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(Juggernaut)
                     })
-                } else if (option == "治癒") {
+                } else if (option == "治癒" && HEROspeed.value >= 100) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2739,7 +2739,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         HP.value += RecoverValue
                         music.play(music.createSoundEffect(WaveShape.Noise, 200, 600, 255, 255, 1000, SoundExpressionEffect.None, InterpolationCurve.Curve), music.PlaybackMode.UntilDone)
                     }
-                } else if (option == "十字斬") {
+                } else if (option == "十字斬" && HEROspeed.value >= 100) {
                     if (SP.value >= 36) {
                         blockMenu.closeMenu()
                         animation.runImageAnimation(
@@ -3263,8 +3263,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
 
         /*=============BOSS2戰鬥效果================ */
         if (CurrentEnemy == 6) {
-            timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊") {
+            timer.throttle("AttackAction", 6000, function () {
+                if (option == "攻擊" && HEROspeed.value >= 100) {
                     blockMenu.closeMenu()
                     BattleReturns += 1
                     HEROspeed.value = 0
@@ -3283,7 +3283,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(BOSS2)
                     })
-                } else if (option == "治癒") {
+                } else if (option == "治癒" && HEROspeed.value >= 100) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         BattleReturns += 1
@@ -3294,7 +3294,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         HP.value += RecoverValue
                         music.play(music.createSoundEffect(WaveShape.Noise, 200, 600, 255, 255, 1000, SoundExpressionEffect.None, InterpolationCurve.Curve), music.PlaybackMode.UntilDone)
                     }
-                } else if (option == "十字斬") {
+                } else if (option == "十字斬" && HEROspeed.value>=100) {
                     if (SP.value >= 36) {
                         blockMenu.closeMenu()
                         AccomplishSkill = 1
@@ -4224,11 +4224,12 @@ if (Scene == 0) {
     Scene1F()
     TittleScene()
 }
+/*Hero變數 */
 Battle = 0
-Level = 1
-HPvalue = 100
-SPvalue = 10
-Damage = 10
+Level = 20
+HPvalue = 400000
+SPvalue = 270
+Damage = 2300
 Weapons = 0
 TouchWeapon = ""
 CurrentWeapon = "赤拳"
@@ -6692,6 +6693,7 @@ game.onUpdateInterval(100, function () {
                             game.splash("升級! 17 to 18", "HP +600")
                             game.splash("升級! 18 to 19", "傷害 +150")
                             game.splash("升級! 19 to 20", "習得'血刃之咒'")
+                            game.showLongText("等級已達MAX，無法再升級", DialogLayout.Bottom)
                             Level += 12
                             HPvalue += 1500
                             RecoverValue += 420
@@ -6706,7 +6708,7 @@ game.onUpdateInterval(100, function () {
                 if (HEROspeed.value >= 100) {
                     if (FireRistent == 0) {
 
-                        timer.throttle("ChooseAction", 2000, function () {
+                        timer.throttle("ChooseAction", 6000, function () {
                             if (Level >= 20) {
                                 blockMenu.showMenu(["攻擊", "治癒", "十字斬", "血刃之咒"], MenuStyle.List, MenuLocation.BottomHalf)
                             } else {
@@ -6958,7 +6960,7 @@ game.onUpdateInterval(100, function () {
 
                         })
                     } else {
-                        timer.throttle("ChooseAction", 2000, function () {
+                        timer.throttle("ChooseAction", 6000, function () {
                             if (Level >= 20) {
                                 blockMenu.showMenu(["攻擊", "治癒", "十字斬", "血刃之咒"], MenuStyle.List, MenuLocation.BottomHalf)
                             } else {
@@ -6978,7 +6980,7 @@ game.onUpdateInterval(100, function () {
                         HEROspeed.value += 0
                     } else {
                         BOSSSpeed_2.value += 2
-                        HEROspeed.value += 5
+                        HEROspeed.value += 1.666
                     }
                     if (BOSSSpeed_2.value == 100) {
                         RandomAttack = randint(2, 3)
@@ -11109,6 +11111,23 @@ game.onUpdateInterval(100, function () {
                     }
 
                 }
+            }
+            if (JuggernautHP.value <= 0) {
+                controller.moveSprite(Hero, 100, 100)
+                Battle = 0
+                sprites.destroy(BOSS2, effects.fire, 500)
+                DestoryStatue()
+                sprites.destroy(BOSSHP_2, effects.none, 100)
+                sprites.destroy(BOSSSP_2, effects.none, 100)
+                sprites.destroy(BOSSSpeed_2, effects.none, 100)
+                timer.after(1100, function () {
+                    tiles.setCurrentTilemap(tilemap`層級10`)
+                    scaling.scaleToPercent(Hero, 100, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+                    tiles.placeOnTile(Hero, tiles.getTileLocation(0, 10))
+                    scene.cameraFollowSprite(Hero)
+                    tiles.placeOnTile(treasure5, tiles.getTileLocation(10, 6))
+                    Walk()
+                })
             }
         }
     }
