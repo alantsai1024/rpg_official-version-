@@ -1719,14 +1719,14 @@ function Scene1F() {
         ......2225555555552222..
         .........2222222222.....
         `, SpriteKind.Enemy)
-    tiles.placeOnTile(Hero, tiles.getTileLocation(14, 2))
+    tiles.placeOnTile(Hero, tiles.getTileLocation(0, 0))
     tiles.placeOnTile(Enemy1, tiles.getTileLocation(5, 8))
     tiles.placeOnTile(Enemy2, tiles.getTileLocation(6, 1))
     tiles.placeOnTile(Enemy3, tiles.getTileLocation(12, 3))
     tiles.placeOnTile(treasure1, tiles.getTileLocation(4, 15))
     tiles.placeOnTile(treasure2, tiles.getTileLocation(6, 0))
     tiles.placeOnTile(treasure3, tiles.getTileLocation(12, 2))
-    tiles.placeOnTile(BOSS1, tiles.getTileLocation(14, 5))
+    tiles.placeOnTile(BOSS1, tiles.getTileLocation(14, 1))
     scene.cameraFollowSprite(Hero)
     controller.moveSprite(Hero, 100, 100)
 }
@@ -1877,7 +1877,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairLarge, function (spr
     if (Scene == 2) {
         tiles.setCurrentTilemap(tilemap`層級10`)
     }
-    tiles.placeOnTile(Hero, tiles.getTileLocation(0, 10))
+    tiles.placeOnTile(Hero, tiles.getTileLocation(14, 0))
     GodSword = sprites.create(img`
         ...............................
         dd.............................
@@ -4226,10 +4226,10 @@ if (Scene == 0) {
 }
 /*Hero變數 */
 Battle = 0
-Level = 20
-HPvalue = 400000
-SPvalue = 270
-Damage = 2300
+Level = 1
+HPvalue = 100
+SPvalue = 10
+Damage = 10
 Weapons = 0
 TouchWeapon = ""
 CurrentWeapon = "赤拳"
