@@ -1,11 +1,11 @@
 /*
 作品:RPG速通地下城正式版v1.0
 作者:30321蔡宇倫
-日期2023/4/5
+日期:2023/4/5
 
 遊戲招式說明:
 *治癒:使自身恢復HP(隨等級增長而增加治癒量)[開局即有]
-*十字斬:對敵人造成兩次傷害(基於自身傷害)[達到5級]
+*十字斬:對敵人造成兩次傷害(基於自身傷害增長)[達到5級]
 *血刃之咒:提升傷害1.5倍持續3回合(不可疊加)[達到20級]
 
 友情攻略提示:
@@ -611,7 +611,7 @@ function BOSS2SpeedCreate() {
 /*========================================= */
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Scene != 0) {
-        HeroInformation = ["Hero" + "\\n" + "等級:" + Level + "\\n" + "生命值:" + HPvalue + "\\n" + "傷害:" + Damage + "\\n" + "法力:" + SPvalue + "\\n" + "武器:" + CurrentWeapon + "\\n" + "抗性:" + SuperState]
+        HeroInformation = ["爆肝的Hero" + "\\n" + "等級:" + Level + "\\n" + "生命值:" + HPvalue + "\\n" + "傷害:" + Damage + "\\n" + "法力:" + SPvalue + "\\n" + "武器:" + CurrentWeapon + "\\n" + "抗性:" + SuperState]
     }
     game.showLongText(HeroInformation, DialogLayout.Full)
 })
@@ -4158,13 +4158,13 @@ function Enemy2HPcreate() {
     EnemyHP_2.setColor(10, 1)
     EnemyHP_2.setPosition(43, 5)
 }
-let BattleReturns = 1
-let DamageUP = 0
-let RecordBattleReturns = 999
-let AccomplishSkill = 0
+let BattleReturns = 1      //當前回合數
+let DamageUP = 0           //是否已經使用'血刃之咒'增加攻擊
+let RecordBattleReturns = 999    //記錄使用'血刃之咒'時的當前回合數(用來計算是否超過3回合)
+let AccomplishSkill = 0          //使雙方速度暫停的偵測變數，避免戰鬥過度混亂
 let BOSSskill_1: TextSprite = null
 let BOSSskill_2: TextSprite = null
-let RandomAttack = 0
+let RandomAttack = 0                    //使2F的BOSS會隨機攻擊或使用絕招
 let SwordRUN: Sprite = null
 let BOSS2CutSKILL: Sprite = null   //諸天劍陣
 let FirstCutSKILL_1: Sprite = null
@@ -4228,19 +4228,19 @@ if (Scene == 0) {
     Scene1F()
     TittleScene()
 }
-/*Hero變數 */
-Battle = 0
-Level = 1
-HPvalue = 100
-SPvalue = 10
-Damage = 10
-Weapons = 0
-TouchWeapon = ""
-CurrentWeapon = "赤拳"
-FireRistent = 0
-CurrentEnemy = 0
+/* ===玩家變數=== */
+Battle = 0              //是否進入戰鬥
+Level = 1               //等級
+HPvalue = 100           //生命值
+SPvalue = 10            //法力值
+Damage = 10             //傷害值
+Weapons = 0             //偵測當前武器
+TouchWeapon = ""        //偵測碰到的武器
+CurrentWeapon = "赤拳"   
+FireRistent = 0         //是否有火免狀態
+CurrentEnemy = 0        //當前遇到的敵人
 SuperState = "無"
-RecoverValue = 80
+RecoverValue = 80       //治癒量
 game.onUpdate(function () {
     Moving = controller.up.isPressed() || controller.left.isPressed() || (controller.right.isPressed() || controller.down.isPressed())
     if (!(Moving)) {
