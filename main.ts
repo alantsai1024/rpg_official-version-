@@ -2371,7 +2371,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
     if (Battle == 1) {
         if (CurrentEnemy == 1) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊") {
+                if (option == "攻擊" && HEROspeed.value >= 100)  {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     EnemyHP_1.value += 0 - Damage
@@ -2383,7 +2383,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(Enemy1)
                     })
-                } else if (option == "治癒") {
+                } else if (option == "治癒" && HEROspeed.value >= 100) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2456,7 +2456,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         }
         if (CurrentEnemy == 2) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊") {
+                if (option == "攻擊" && HEROspeed.value >= 100) {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     EnemyHP_2.value += 0 - Damage
@@ -2468,7 +2468,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(Enemy2)
                     })
-                } else if (option == "治癒") {
+                } else if (option == "治癒" && HEROspeed.value >= 100) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2541,7 +2541,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         }
         if (CurrentEnemy == 3) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊") {
+                if (option == "攻擊" && HEROspeed.value >= 100) {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     EnemyHP_3.value += 0 - Damage
@@ -2553,7 +2553,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(Enemy3)
                     })
-                } else if (option == "治癒") {
+                } else if (option == "治癒" && HEROspeed.value >= 100) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2626,7 +2626,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         }
         if (CurrentEnemy == 4) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊") {
+                if (option == "攻擊" && HEROspeed.value >= 100) {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     BOSSHP_1.value += 0 - Damage
@@ -2638,7 +2638,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(BOSS1)
                     })
-                } else if (option == "治癒") {
+                } else if (option == "治癒" && HEROspeed.value >= 100) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -4273,28 +4273,36 @@ game.onUpdateInterval(100, function () {
             }
         }
         if (Hero.overlapsWith(Enemy1)) {
+            if (Battle != 1) {
             Battle = 1
             CurrentEnemy = 1
             controller.moveSprite(Hero, 0, 0)
             AssessBattle1()
+            }
         }
         if (Hero.overlapsWith(Enemy2)) {
+            if (Battle != 1) {
             Battle = 1
             CurrentEnemy = 2
             controller.moveSprite(Hero, 0, 0)
             AssessBattle2()
+            }
         }
         if (Hero.overlapsWith(Enemy3)) {
+            if (Battle != 1) {
             Battle = 1
             CurrentEnemy = 3
             controller.moveSprite(Hero, 0, 0)
             AssessBattle3()
+            }
         }
         if (Hero.overlapsWith(BOSS1)) {
+            if (Battle != 1) {
             Battle = 1
             CurrentEnemy = 4
             controller.moveSprite(Hero, 0, 0)
             AssessBattle4()
+            }
         }
     }
     if (Battle == 1) {
@@ -5672,7 +5680,7 @@ game.onUpdateInterval(100, function () {
                 CurrentWeapon = "神劍"
             }
             if (Hero.overlapsWith(Juggernaut)) {
-                
+              
                     Battle = 1
                     CurrentEnemy = 5
                     AssessBattle5()
@@ -6693,7 +6701,7 @@ game.onUpdateInterval(100, function () {
                             game.splash("升級! 17 to 18", "HP +600")
                             game.splash("升級! 18 to 19", "傷害 +150")
                             game.splash("升級! 19 to 20", "習得'血刃之咒'")
-                            game.showLongText("等級已達MAX，無法再升級", DialogLayout.Bottom)
+                            game.splash("等級已達MAX，無法再升級")
                             Level += 12
                             HPvalue += 1500
                             RecoverValue += 420
@@ -11111,24 +11119,25 @@ game.onUpdateInterval(100, function () {
                     }
 
                 }
+                if (BOSSHP_2.value <= 0) {
+                    controller.moveSprite(Hero, 100, 100)
+                    Battle = 0
+                    sprites.destroy(BOSS2, effects.fire, 500)
+                    DestoryStatue()
+                    sprites.destroy(BOSSHP_2, effects.none, 100)
+                    sprites.destroy(BOSSSP_2, effects.none, 100)
+                    sprites.destroy(BOSSSpeed_2, effects.none, 100)
+                    timer.after(1100, function () {
+                        tiles.setCurrentTilemap(tilemap`層級10`)
+                        scaling.scaleToPercent(Hero, 100, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+                        tiles.placeOnTile(Hero, tiles.getTileLocation(0, 10))
+                        scene.cameraFollowSprite(Hero)
+                        tiles.placeOnTile(treasure5, tiles.getTileLocation(10, 6))
+                        Walk()
+                    })
+                }
             }
-            if (JuggernautHP.value <= 0) {
-                controller.moveSprite(Hero, 100, 100)
-                Battle = 0
-                sprites.destroy(BOSS2, effects.fire, 500)
-                DestoryStatue()
-                sprites.destroy(BOSSHP_2, effects.none, 100)
-                sprites.destroy(BOSSSP_2, effects.none, 100)
-                sprites.destroy(BOSSSpeed_2, effects.none, 100)
-                timer.after(1100, function () {
-                    tiles.setCurrentTilemap(tilemap`層級10`)
-                    scaling.scaleToPercent(Hero, 100, ScaleDirection.Uniformly, ScaleAnchor.Middle)
-                    tiles.placeOnTile(Hero, tiles.getTileLocation(0, 10))
-                    scene.cameraFollowSprite(Hero)
-                    tiles.placeOnTile(treasure5, tiles.getTileLocation(10, 6))
-                    Walk()
-                })
-            }
+            
         }
     }
 })
