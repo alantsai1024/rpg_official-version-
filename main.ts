@@ -2371,7 +2371,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
     if (Battle == 1) {
         if (CurrentEnemy == 1) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊" && HEROspeed.value >= 100)  {
+                if (option == "攻擊" && HEROspeed.value >= 100) {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     EnemyHP_1.value += 0 - Damage
@@ -3294,7 +3294,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         HP.value += RecoverValue
                         music.play(music.createSoundEffect(WaveShape.Noise, 200, 600, 255, 255, 1000, SoundExpressionEffect.None, InterpolationCurve.Curve), music.PlaybackMode.UntilDone)
                     }
-                } else if (option == "十字斬" && HEROspeed.value>=100) {
+                } else if (option == "十字斬" && HEROspeed.value >= 100) {
                     if (SP.value >= 36) {
                         blockMenu.closeMenu()
                         AccomplishSkill = 1
@@ -3904,7 +3904,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         })
                     }
                 }
-                timer.after(1000, function () {
+                timer.after(3000, function () {
                     AccomplishSkill = 0
                     animation.runImageAnimation(
                         Hero,
@@ -4274,34 +4274,34 @@ game.onUpdateInterval(100, function () {
         }
         if (Hero.overlapsWith(Enemy1)) {
             if (Battle != 1) {
-            Battle = 1
-            CurrentEnemy = 1
-            controller.moveSprite(Hero, 0, 0)
-            AssessBattle1()
+                Battle = 1
+                CurrentEnemy = 1
+                controller.moveSprite(Hero, 0, 0)
+                AssessBattle1()
             }
         }
         if (Hero.overlapsWith(Enemy2)) {
             if (Battle != 1) {
-            Battle = 1
-            CurrentEnemy = 2
-            controller.moveSprite(Hero, 0, 0)
-            AssessBattle2()
+                Battle = 1
+                CurrentEnemy = 2
+                controller.moveSprite(Hero, 0, 0)
+                AssessBattle2()
             }
         }
         if (Hero.overlapsWith(Enemy3)) {
             if (Battle != 1) {
-            Battle = 1
-            CurrentEnemy = 3
-            controller.moveSprite(Hero, 0, 0)
-            AssessBattle3()
+                Battle = 1
+                CurrentEnemy = 3
+                controller.moveSprite(Hero, 0, 0)
+                AssessBattle3()
             }
         }
         if (Hero.overlapsWith(BOSS1)) {
             if (Battle != 1) {
-            Battle = 1
-            CurrentEnemy = 4
-            controller.moveSprite(Hero, 0, 0)
-            AssessBattle4()
+                Battle = 1
+                CurrentEnemy = 4
+                controller.moveSprite(Hero, 0, 0)
+                AssessBattle4()
             }
         }
     }
@@ -5680,11 +5680,11 @@ game.onUpdateInterval(100, function () {
                 CurrentWeapon = "神劍"
             }
             if (Hero.overlapsWith(Juggernaut)) {
-              
-                    Battle = 1
-                    CurrentEnemy = 5
-                    AssessBattle5()
-                
+
+                Battle = 1
+                CurrentEnemy = 5
+                AssessBattle5()
+
 
 
             }
@@ -6904,7 +6904,7 @@ game.onUpdateInterval(100, function () {
                                 250,
                                 false
                             )
-                            HP.value += -10
+                            HP.value += -200
                             timer.after(300, function () {
                                 animation.runImageAnimation(
                                     Hero,
@@ -6987,22 +6987,22 @@ game.onUpdateInterval(100, function () {
                         BOSSSpeed_2.value += 0
                         HEROspeed.value += 0
                     } else {
-                        BOSSSpeed_2.value += 2
+                        BOSSSpeed_2.value += 1
                         HEROspeed.value += 1.666
                     }
                     if (BOSSSpeed_2.value == 100) {
-                        RandomAttack = randint(2, 3)
+                        RandomAttack = randint(2, 4)
                         /* ===諸天劍陣=== */
                         if (RandomAttack == 2) {
                             if (BOSSSP_2.value >= 80 && BOSSHP_2.value > BOSSHP_2.max / 4) {
-                                timer.throttle("BOSS2skill_2", 5000, function () {
-                                    AccomplishSkill = 1
+                                timer.throttle("BOSS2skill_2", 10000, function () {
+
                                     BOSSskill_2 = textsprite.create("諸天劍陣")
                                     BOSSskill_2.setOutline(5, 2)
                                     BOSSskill_2.setPosition(150, 110)
                                     BOSSSpeed_2.value = 0
                                     BOSSSP_2.value += -80
-
+                                    AccomplishSkill = 1
                                     animation.runImageAnimation(BOSS2, [
                                         img`
                                             ...................................
@@ -8469,7 +8469,7 @@ game.onUpdateInterval(100, function () {
                                 })
                             } else {
                                 if (BOSSSP_2.value >= 50 && BOSSHP_2.value < BOSSHP_2.max / 4) {
-                                    timer.throttle("BOSS2skill_2", 5000, function () {
+                                    timer.throttle("BOSS2skill_2", 10000, function () {
                                         BOSSskill_2 = textsprite.create("治癒")
                                         BOSSskill_2.setOutline(5, 2)
                                         BOSSskill_2.setPosition(150, 110)
@@ -9084,10 +9084,11 @@ game.onUpdateInterval(100, function () {
                             }
                         }
                         /*===================普攻=================== */
-                        if (RandomAttack == 3) {
+                        if (RandomAttack >= 3) {
 
-                            timer.throttle("BOSS2AttackAction", 5000, function () {
+                            timer.throttle("BOSS2AttackAction", 10000, function () {
                                 BOSSSpeed_2.value = 0
+                                AccomplishSkill = 1
                                 animation.runImageAnimation(BOSS2, [img`
                                         ....................................
                                         ....................................
@@ -10503,9 +10504,12 @@ game.onUpdateInterval(100, function () {
                                 })
 
                             })
+                            timer.debounce("BOSS2AttackAction", 3000, function () {
+                                AccomplishSkill = 0
+                            })
                         }
                         if (BOSSHP_2.value < BOSSHP_2.max / 4 && BOSSSP_2.value >= 50) {
-                            timer.throttle("BOSS2skill_2", 5000, function () {
+                            timer.throttle("BOSS2skill_2", 10000, function () {
                                 BOSSskill_2 = textsprite.create("治癒")
                                 BOSSskill_2.setOutline(5, 2)
                                 BOSSskill_2.setPosition(150, 110)
@@ -11137,7 +11141,7 @@ game.onUpdateInterval(100, function () {
                     })
                 }
             }
-            
+
         }
     }
 })

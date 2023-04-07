@@ -4,6 +4,18 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
+    "tile1": {
+        "data": "hwQQABAAAAB3d3d3d3d3d3eId3d3d3d3iIiIeHd3d3d4d3d4d3d3d3h3d3d3d3d3eHd3d3d3d3d4d3d3d3d3iHh3d3eIeHeIeHd3d3h3d3d4d3d3eHd3d3h3d4d4d3d3eHd3iHd3d3eId4d4d3d3d4eIiHd3d3d3d4d4d3d3d3d3d3d3d3d3dw==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile"
+    },
+    "tile2": {
+        "data": "hwQQABAAAACIiIiIiIiIiIhViIiIiIiIVVVVhYiIiIiFiIiFiIiIiIWIiIiIiIiIhYiIiIiIiIiFiIiIiIiIVYWIiIhVhYhVhYiIiIWIiIiFiIiIhYiIiIWIiFiFiIiIhYiIVYiIiIhViFiFiIiIiFhVVYiIiIiIiFiFiIiIiIiIiIiIiIiIiA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile0"
+    },
     "層級8": {
         "id": "層級8",
         "mimeType": "application/mkcd-tilemap",
@@ -44,19 +56,6 @@
         ],
         "displayName": "層級0"
     },
-    "層級10": {
-        "id": "層級10",
-        "mimeType": "application/mkcd-tilemap",
-        "data": "MTAxMDAwMTAwMDAyMDIwMjAxMDEwMTAxMDEwMTAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAxMDEwMTAxMDEwMTAyMDEwMTAxMDEwMTAxMDEwMTAyMDIwMjAyMDIwMjAxMDIwMjAxMDEwMTAyMDIwMjAyMDEwMTAxMDEwMTAyMDEwMjAxMDIwMjAyMDIwMTAxMDIwMjAyMDIwMjAyMDIwMTAyMDEwMjAxMDEwMTAxMDIwMTAxMDEwMTAxMDEwMTAxMDIwMTAyMDEwMTAxMDEwMjAxMDEwMTAxMDIwMjAyMDEwMjAxMDIwMjAyMDEwMTAyMDEwMTAxMDEwMjAyMDIwMTAyMDEwMjAxMDIwMTAyMDIwMjAyMDIwMTAxMDEwMjAxMDIwMjAyMDEwMjAxMDEwMjAxMDEwMjAxMDEwMTAyMDEwMTAyMDIwMTAyMDIwMTAyMDEwMTAyMDIwMjAyMDIwMTAxMDIwMjAyMDEwMjAxMDIwMTAxMDIwMjAyMDIwMjAxMDEwMjAyMDIwMTAyMDEwMjAxMDEwMjAxMDEwMTAxMDEwMTAyMDQwMjAxMDIwMTAyMDEwMTAyMDEwMjAyMDIwMjAxMDIwMjAyMDEwMjAxMDIwMTAxMDIwMTAyMDEwMTAxMDEwMjAzMDIwMTAyMDIwMjAxMDEwMjAyMDIwMjAyMDIwMjAyMDAyMDIyMjIwMjAwMDAwMDAwMDAwMDAwMjIyMjIyMjAyMjIyMjIwMjAwMDAyMDAwMjIwMjAwMjAyMjIyMjAyMDAwMDAyMjAwMDAwMDIwMjAyMDIyMDIyMjIyMjIyMjIwMjAyMjAyMjIyMjAwMjAyMDAwMjAwMjIyMjIwMDIwMjAyMDIwMDAwMDIwMjIyMDAwMjAyMDAyMjIyMDIyMjAwMjIwMDAwMjIyMDAwMDIwMDIwMDAyMDIyMjAwMDAyMDAyMDAwMjAyMjIyMDIyMjIwMjAwMDIwMjIyMjAwMDAwMDIwMDAyMDIyMjIwMjAyMjAyMDAwMjAwMjIwMDAwMDAwMA==",
-        "tileset": [
-            "myTiles.transparency16",
-            "sprites.builtin.forestTiles10",
-            "sprites.dungeon.hazardLava1",
-            "sprites.dungeon.doorLockedNorth",
-            "sprites.dungeon.hazardLava0"
-        ],
-        "displayName": "層級10"
-    },
     "層級3": {
         "id": "層級3",
         "mimeType": "application/mkcd-tilemap",
@@ -86,6 +85,62 @@
             "sprites.dungeon.stairLarge"
         ],
         "displayName": "層級1"
+    },
+    "層級5": {
+        "id": "層級5",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAyMDIwMjAxMDEwMTAxMDEwMTAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwNjAyMDIwMjAxMDEwMTAxMDEwMTAyMDEwMTAxMDEwMTAxMDEwMTAyMDIwMjAyMDIwMjAxMDIwMjAxMDEwMTAyMDIwMjAyMDEwMTAxMDEwMTAyMDEwMjAxMDIwMjAyMDIwMTAxMDIwMjAyMDIwMjAyMDIwMTAyMDEwMjAxMDEwMTAxMDIwMTAxMDEwMTAxMDEwMTAxMDIwMTAyMDEwMTAxMDEwMjAxMDEwMTAxMDIwMjAyMDEwMjAxMDIwMjAyMDEwMTAyMDEwMTAxMDEwMjAyMDIwMTAyMDEwMjAxMDIwMTAyMDIwMjAyMDIwMTAxMDEwMjAxMDIwMjAyMDEwMjAxMDEwMjAxMDEwMjAxMDEwMTAyMDEwMTAyMDUwMTAyMDIwMTAyMDEwMTAyMDIwMjAyMDIwMTAxMDIwMjAyMDEwMjAxMDIwMTAxMDIwMjAyMDIwMjAxMDEwMjAyMDIwMTAyMDEwMjAxMDEwMjAxMDEwMTAxMDEwMTAyMDQwMjAxMDIwMTAyMDEwMTAyMDEwMjAyMDIwMjAxMDIwMjAyMDEwMjAxMDIwMTAxMDIwMTAyMDEwMTAxMDEwMjAzMDIwMTAyMDIwMjAxMDEwMjAyMDIwMjAyMDIwMjAyMDAyMDIyMjIwMjAwMDAwMDAwMDAwMDAwMjIyMjIyMjAyMjIyMjIwMjAwMDAyMDAwMjIwMjAwMjAyMjIyMjAyMDAwMDAyMjAwMDAwMDIwMjAyMDIyMDIyMjIyMjIyMjIwMjAyMjAyMjIyMjAwMjAyMDAwMjAwMjIyMjIwMDIwMjAyMDIwMDAwMDIwMjIyMDAwMjAyMDAyMjIyMDIyMjAwMjIwMDAwMjIyMDAwMDIwMDIwMDAyMDIyMjAwMDAyMDAyMDAwMjAyMjIyMDIyMjIwMjAwMDIwMjIyMjAwMDAwMDIwMDAyMDIyMjIwMjAyMjAyMDAwMjAwMjIwMDAwMDAwMA==",
+        "tileset": [
+            "myTiles.transparency16",
+            "sprites.builtin.forestTiles10",
+            "sprites.dungeon.hazardLava1",
+            "sprites.dungeon.doorLockedNorth",
+            "sprites.dungeon.hazardLava0",
+            "myTiles.tile1",
+            "myTiles.tile2"
+        ],
+        "displayName": "層級6"
+    },
+    "層級10": {
+        "id": "層級10",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAyMDIwMjAxMDEwMTAxMDEwMTAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAxMDEwMTAxMDEwMTAyMDEwMTAxMDEwMTAxMDEwMTAyMDIwMjAyMDIwMjAxMDIwMjAxMDEwMTAyMDIwMjAyMDEwMTAxMDEwMTAyMDEwMjAxMDIwMjAyMDIwMTAxMDIwMjAyMDIwMjAyMDIwMTAyMDEwMjAxMDEwMTAxMDIwMTAxMDEwMTAxMDEwMTAxMDIwMTAyMDEwMTAxMDEwMjAxMDEwMTAxMDIwMjAyMDEwMjAxMDIwMjAyMDEwMTAyMDEwMTAxMDEwMjAyMDIwMTAyMDEwMjAxMDIwMTAyMDIwMjAyMDIwMTAxMDEwMjAxMDIwMjAyMDEwMjAxMDEwMjAxMDEwMjAxMDEwMTAyMDEwMTAyMDIwMTAyMDIwMTAyMDEwMTAyMDIwMjAyMDIwMTAxMDIwMjAyMDEwMjAxMDIwMTAxMDIwMjAyMDIwMjAxMDEwMjAyMDIwMTAyMDEwMjAxMDEwMjAxMDEwMTAxMDEwMTAyMDQwMjAxMDIwMTAyMDEwMTAyMDEwMjAyMDIwMjAxMDIwMjAyMDEwMjAxMDIwMTAxMDIwMTAyMDEwMTAxMDEwMjAzMDIwMTAyMDIwMjAxMDEwMjAyMDIwMjAyMDIwMjAyMDAyMDIyMjIwMjAwMDAwMDAwMDAwMDAwMjIyMjIyMjAyMjIyMjIwMjAwMDAyMDAwMjIwMjAwMjAyMjIyMjAyMDAwMDAyMjAwMDAwMDIwMjAyMDIyMDIyMjIyMjIyMjIwMjAyMjAyMjIyMjAwMjAyMDAwMjAwMjIyMjIwMDIwMjAyMDIwMDAwMDIwMjIyMDAwMjAyMDAyMjIyMDIyMjAwMjIwMDAwMjIyMDAwMDIwMDIwMDAyMDIyMjAwMDAyMDAyMDAwMjAyMjIyMDIyMjIwMjAwMDIwMjIyMjAwMDAwMDIwMDAyMDIyMjIwMjAyMjAyMDAwMjAwMjIwMDAwMDAwMA==",
+        "tileset": [
+            "myTiles.transparency16",
+            "sprites.builtin.forestTiles10",
+            "sprites.dungeon.hazardLava1",
+            "sprites.dungeon.doorLockedNorth",
+            "sprites.dungeon.hazardLava0"
+        ],
+        "displayName": "層級10"
+    },
+    "層級7": {
+        "id": "層級7",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAyMDIwMjAxMDEwMTAxMDEwMTAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwNTAyMDIwMjAxMDEwMTAxMDEwMTAyMDEwMTAxMDEwMTAxMDEwMTAyMDIwMjAyMDIwMjAxMDIwMjAxMDEwMTAyMDIwMjAyMDEwMTAxMDEwMTAyMDEwMjAxMDIwMjAyMDIwMTAxMDIwMjAyMDIwMjAyMDIwMTAyMDEwMjAxMDEwMTAxMDIwMTAxMDEwMTAxMDEwMTAxMDIwMTAyMDEwMTAxMDEwMjAxMDEwMTAxMDIwMjAyMDEwMjAxMDIwMjAyMDEwMTAyMDEwMTAxMDEwMjAyMDIwMTAyMDEwMjAxMDIwMTAyMDIwMjAyMDIwMTAxMDEwMjAxMDIwMjAyMDEwMjAxMDEwMjAxMDEwMjAxMDEwMTAyMDEwMTAyMDIwMTAyMDIwMTAyMDEwMTAyMDIwMjAyMDIwMTAxMDIwMjAyMDEwMjAxMDIwMTAxMDIwMjAyMDIwMjAxMDEwMjAyMDIwMTAyMDEwMjAxMDEwMjAxMDEwMTAxMDEwMTAyMDQwMjAxMDIwMTAyMDEwMTAyMDEwMjAyMDIwMjAxMDIwMjAyMDEwMjAxMDIwMTAxMDIwMTAyMDEwMTAxMDEwMjAzMDIwMTAyMDIwMjAxMDEwMjAyMDIwMjAyMDIwMjAyMDAyMDIyMjIwMjAwMDAwMDAwMDAwMDAwMjIyMjIyMjAyMjIyMjIwMjAwMDAyMDAwMjIwMjAwMjAyMjIyMjAyMDAwMDAyMjAwMDAwMDIwMjAyMDIyMDIyMjIyMjIyMjIwMjAyMjAyMjIyMjAwMjAyMDAwMjAwMjIyMjIwMDIwMjAyMDIwMDAwMDIwMjIyMDAwMjAyMDAyMjIyMDIyMjAwMjIwMDAwMjIyMDAwMDIwMDIwMDAyMDIyMjAwMDAyMDAyMDAwMjAyMjIyMDIyMjIwMjAwMDIwMjIyMjAwMDAwMDIwMDAyMDIyMjIwMjAyMjAyMDAwMjAwMjIwMDAwMDAwMA==",
+        "tileset": [
+            "myTiles.transparency16",
+            "sprites.builtin.forestTiles10",
+            "sprites.dungeon.hazardLava1",
+            "sprites.dungeon.doorLockedNorth",
+            "sprites.dungeon.hazardLava0",
+            "myTiles.tile2"
+        ],
+        "displayName": "層級9"
+    },
+    "層級12": {
+        "id": "層級12",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAyMDIwMjAxMDEwMTAxMDEwMTAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAyMDIwMjAxMDEwMTAxMDEwMTAyMDEwMTAxMDEwMTAxMDEwMTAyMDIwMjAyMDIwMjAxMDIwMjAxMDEwMTAyMDIwMjAyMDEwMTAxMDEwMTAyMDEwMjAxMDIwMjAyMDIwMTAxMDIwMjAyMDIwMjAyMDIwMTAyMDEwMjAxMDEwMTAxMDIwMTAxMDEwMTAxMDEwMTAxMDIwMTAyMDEwMTAxMDEwMjAxMDEwMTAxMDIwMjAyMDEwMjAxMDIwMjAyMDEwMTAyMDEwMTAxMDEwMjAyMDIwMTAyMDEwMjAxMDIwMTAyMDIwMjAyMDIwMTAxMDEwMjAxMDIwMjAyMDEwMjAxMDEwMjAxMDEwMjAxMDEwMTAyMDEwMTAyMDUwMTAyMDIwMTAyMDEwMTAyMDIwMjAyMDIwMTAxMDIwMjAyMDEwMjAxMDIwMTAxMDIwMjAyMDIwMjAxMDEwMjAyMDIwMTAyMDEwMjAxMDEwMjAxMDEwMTAxMDEwMTAyMDQwMjAxMDIwMTAyMDEwMTAyMDEwMjAyMDIwMjAxMDIwMjAyMDEwMjAxMDIwMTAxMDIwMTAyMDEwMTAxMDEwMjAzMDIwMTAyMDIwMjAxMDEwMjAyMDIwMjAyMDIwMjAyMDAyMDIyMjIwMjAwMDAwMDAwMDAwMDAwMjIyMjIyMjAyMjIyMjIwMjAwMDAyMDAwMjIwMjAwMjAyMjIyMjAyMDAwMDAyMjAwMDAwMDIwMjAyMDIyMDIyMjIyMjIyMjIwMjAyMjAyMjIyMjAwMjAyMDAwMjAwMjIyMjIwMDIwMjAyMDIwMDAwMDIwMjIyMDAwMjAyMDAyMjIyMDIyMjAwMjIwMDAwMjIyMDAwMDIwMDIwMDAyMDIyMjAwMDAyMDAyMDAwMjAyMjIyMDIyMjIwMjAwMDIwMjIyMjAwMDAwMDIwMDAyMDIyMjIwMjAyMjAyMDAwMjAwMjIwMDAwMDAwMA==",
+        "tileset": [
+            "myTiles.transparency16",
+            "sprites.builtin.forestTiles10",
+            "sprites.dungeon.hazardLava1",
+            "sprites.dungeon.doorLockedNorth",
+            "sprites.dungeon.hazardLava0",
+            "myTiles.tile1"
+        ],
+        "displayName": "層級13"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
