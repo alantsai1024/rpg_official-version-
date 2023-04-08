@@ -11,6 +11,7 @@
 友情攻略提示:
 *2F的所有敵人生命值愈低防禦越強，只有使用絕技可以無視敵人防禦
 */
+
 function Walk() {
     if (Battle == 0) {
         if (LastDirection == 0) {
@@ -886,6 +887,7 @@ function TittleScene() {
     game.showLongText("失敗條件:玩家HP為0", DialogLayout.Bottom)
     game.showLongText("按下B後可以查看玩家訊息", DialogLayout.Bottom)
     game.splash("1F", "難度:簡單")
+   
 }
 function Enemy1HPcreate() {
     if (Scene == 1) {
@@ -911,6 +913,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 3
     Walk()
 })
+
 function AssessBattle3() {
     if (Battle == 1) {
         if (CurrentEnemy == 3) {
@@ -1544,6 +1547,7 @@ function Enemy1Speedcreate() {
     EnemySpeed_1.setColor(2, 1)
     EnemySpeed_1.setPosition(35, 12)
 }
+//生命創建
 function HPcreate() {
     HP = statusbars.create(40, 4, StatusBarKind.Health)
     HP.max = HPvalue
@@ -1551,6 +1555,9 @@ function HPcreate() {
     HP.setLabel("HP")
     HP.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
     HP.setPosition(129, 5)
+    //音樂
+    music.play(music.createSong(hex`00780004080200`), music.PlaybackMode.LoopingInBackground)
+
 }
 function DestoryStatue() {
     sprites.destroy(HP, effects.none, 100)
@@ -2472,7 +2479,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(Enemy2)
                     })
-                } else if (option == "治癒" && HEROspeed.value >= 100) {
+                }
+                if (option == "治癒" && HEROspeed.value >= 100) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2557,7 +2565,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(Enemy3)
                     })
-                } else if (option == "治癒" && HEROspeed.value >= 100) {
+                }
+                if (option == "治癒" && HEROspeed.value >= 100) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2642,7 +2651,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(BOSS1)
                     })
-                } else if (option == "治癒" && HEROspeed.value >= 100) {
+                }
+                if (option == "治癒" && HEROspeed.value >= 100) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2733,7 +2743,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(Juggernaut)
                     })
-                } else if (option == "治癒" && HEROspeed.value >= 100) {
+                }
+                if (option == "治癒" && HEROspeed.value >= 100) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2743,7 +2754,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         HP.value += RecoverValue
                         music.play(music.createSoundEffect(WaveShape.Noise, 200, 600, 255, 255, 1000, SoundExpressionEffect.None, InterpolationCurve.Curve), music.PlaybackMode.UntilDone)
                     }
-                } else if (option == "十字斬" && HEROspeed.value >= 100) {
+                }
+                if (option == "十字斬" && HEROspeed.value >= 100) {
                     if (SP.value >= 36) {
                         blockMenu.closeMenu()
                         animation.runImageAnimation(
@@ -3287,7 +3299,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(BOSS2)
                     })
-                } else if (option == "治癒" && HEROspeed.value >= 100) {
+                }
+                if (option == "治癒" && HEROspeed.value >= 100) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         BattleReturns += 1
@@ -3298,7 +3311,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         HP.value += RecoverValue
                         music.play(music.createSoundEffect(WaveShape.Noise, 200, 600, 255, 255, 1000, SoundExpressionEffect.None, InterpolationCurve.Curve), music.PlaybackMode.UntilDone)
                     }
-                } else if (option == "十字斬" && HEROspeed.value >= 100) {
+                }
+                if (option == "十字斬" && HEROspeed.value >= 100) {
                     if (SP.value >= 36) {
                         blockMenu.closeMenu()
                         AccomplishSkill = 1
@@ -3910,6 +3924,8 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                 }
                 timer.after(3000, function () {
                     AccomplishSkill = 0
+                    sprites.destroy(CrossCut)
+                    sprites.destroy(CrossCUT2)
                     animation.runImageAnimation(
                         Hero,
                         [img`
@@ -4142,7 +4158,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                     `
                 ], 350, true)
             })
-        } else {
+        }else{
 
         }
     }
@@ -4158,6 +4174,7 @@ function Enemy2HPcreate() {
     EnemyHP_2.setColor(10, 1)
     EnemyHP_2.setPosition(43, 5)
 }
+let BOSSrecover: TextSprite = null
 let BattleReturns = 1      //當前回合數
 let DamageUP = 0           //是否已經使用'血刃之咒'增加攻擊
 let RecordBattleReturns = 999    //記錄使用'血刃之咒'時的當前回合數(用來計算是否超過3回合)
@@ -4236,7 +4253,7 @@ SPvalue = 10            //法力值
 Damage = 10             //傷害值
 Weapons = 0             //偵測當前武器
 TouchWeapon = ""        //偵測碰到的武器
-CurrentWeapon = "赤拳"   
+CurrentWeapon = "赤拳"
 FireRistent = 0         //是否有火免狀態
 CurrentEnemy = 0        //當前遇到的敵人
 SuperState = "無"
@@ -4599,6 +4616,7 @@ game.onUpdateInterval(100, function () {
             }
             if (EnemyHP_1.value <= 0) {
                 controller.moveSprite(Hero, 100, 100)
+                music.stopAllSounds()
                 Battle = 0
                 sprites.destroy(Enemy1, effects.fire, 500)
                 timer.after(1100, function () {
@@ -6998,7 +7016,7 @@ game.onUpdateInterval(100, function () {
                         RandomAttack = randint(2, 4)
                         /* ===諸天劍陣=== */
                         if (RandomAttack == 2) {
-                            if (BOSSSP_2.value >= 80 && BOSSHP_2.value > BOSSHP_2.max / 4) {
+                            if (BOSSSP_2.value >= 80 && BOSSHP_2.value > 10000) {
                                 timer.throttle("BOSS2skill_2", 10000, function () {
 
                                     BOSSskill_2 = textsprite.create("諸天劍陣")
@@ -8470,13 +8488,14 @@ game.onUpdateInterval(100, function () {
 
                                 timer.debounce("BOSS2skill_2", 5000, function () {
                                     AccomplishSkill = 0
+                                    sprites.destroy(BOSS2CutSKILL)
                                 })
                             } else {
-                                if (BOSSSP_2.value >= 50 && BOSSHP_2.value < BOSSHP_2.max / 4) {
-                                    timer.throttle("BOSS2skill_2", 10000, function () {
-                                        BOSSskill_2 = textsprite.create("治癒")
-                                        BOSSskill_2.setOutline(5, 2)
-                                        BOSSskill_2.setPosition(150, 110)
+                                if (BOSSSP_2.value >= 50 && BOSSHP_2.value < 10000) {
+                                    timer.throttle("BOSSrecover", 10000, function () {
+                                        BOSSrecover = textsprite.create("治癒")
+                                        BOSSrecover.setOutline(5, 2)
+                                        BOSSrecover.setPosition(150, 110)
                                         BOSSSpeed_2.value = 0
                                         BOSSSP_2.value += -50
                                         BOSSHP_2.value += BOSSHP_2.max / 3
@@ -8878,6 +8897,7 @@ game.onUpdateInterval(100, function () {
                                         )
 
                                         timer.after(1000, function () {
+                                            sprites.destroy(BOSSrecover)
                                             animation.runImageAnimation(
                                                 BOSS2,
                                                 [img`
@@ -10510,13 +10530,17 @@ game.onUpdateInterval(100, function () {
                             })
                             timer.debounce("BOSS2AttackAction", 3000, function () {
                                 AccomplishSkill = 0
+                                sprites.destroy(SwordRUN)
+                                sprites.destroy(FirstCutSKILL_1)
+                                sprites.destroy(SecondCutSKILL_1)
+                                sprites.destroy(ThirdCutSKILL_1)
                             })
                         }
-                        if (BOSSHP_2.value < BOSSHP_2.max / 4 && BOSSSP_2.value >= 50) {
-                            timer.throttle("BOSS2skill_2", 10000, function () {
-                                BOSSskill_2 = textsprite.create("治癒")
-                                BOSSskill_2.setOutline(5, 2)
-                                BOSSskill_2.setPosition(150, 110)
+                        if (BOSSHP_2.value < 10000 && BOSSSP_2.value >= 50) {
+                            timer.throttle("BOSSrecover", 10000, function () {
+                                BOSSrecover = textsprite.create("治癒")
+                                BOSSrecover.setOutline(5, 2)
+                                BOSSrecover.setPosition(150, 110)
                                 BOSSSpeed_2.value = 0
                                 BOSSSP_2.value += -50
                                 BOSSHP_2.value += BOSSHP_2.max / 3
@@ -10918,6 +10942,7 @@ game.onUpdateInterval(100, function () {
                                 )
 
                                 timer.after(1000, function () {
+                                    sprites.destroy(BOSSrecover)
                                     animation.runImageAnimation(
                                         BOSS2,
                                         [img`
