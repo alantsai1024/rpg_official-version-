@@ -5696,9 +5696,9 @@ game.onUpdateInterval(100, function () {
                 game.splash("得到神劍")
                 game.showLongText("獲得神的祝福", DialogLayout.Bottom)
                 game.showLongText("傷害 +500", DialogLayout.Bottom)
-                game.showLongText("生命 +1000", DialogLayout.Bottom)
+                game.showLongText("生命 +13500", DialogLayout.Bottom)
                 Damage += 500
-                HPvalue += 1000
+                HPvalue += 13500
                 CurrentWeapon = "神劍"
             }
             if (Hero.overlapsWith(Juggernaut)) {
