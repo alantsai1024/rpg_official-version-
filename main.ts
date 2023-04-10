@@ -2382,7 +2382,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
     if (Battle == 1) {
         if (CurrentEnemy == 1) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊" && HEROspeed.value >= 100) {
+                if (option == "攻擊" ) {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     EnemyHP_1.value += 0 - Damage
@@ -2394,7 +2394,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(Enemy1)
                     })
-                } else if (option == "治癒" && HEROspeed.value >= 100) {
+                } else if (option == "治癒") {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2467,7 +2467,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         }
         if (CurrentEnemy == 2) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊" && HEROspeed.value >= 100) {
+                if (option == "攻擊" ) {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     EnemyHP_2.value += 0 - Damage
@@ -2480,7 +2480,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         effects.clearParticles(Enemy2)
                     })
                 }
-                if (option == "治癒" && HEROspeed.value >= 100) {
+                if (option == "治癒" ) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2553,7 +2553,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         }
         if (CurrentEnemy == 3) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊" && HEROspeed.value >= 100) {
+                if (option == "攻擊" ) {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     EnemyHP_3.value += 0 - Damage
@@ -2566,7 +2566,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         effects.clearParticles(Enemy3)
                     })
                 }
-                if (option == "治癒" && HEROspeed.value >= 100) {
+                if (option == "治癒" ) {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2639,7 +2639,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         }
         if (CurrentEnemy == 4) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊" && HEROspeed.value >= 100) {
+                if (option == "攻擊" ) {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     BOSSHP_1.value += 0 - Damage
@@ -2651,8 +2651,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(BOSS1)
                     })
-                }
-                if (option == "治癒" && HEROspeed.value >= 100) {
+                }else if (option == "治癒") {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -3280,7 +3279,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         /*=============BOSS2戰鬥效果================ */
         if (CurrentEnemy == 6) {
             timer.throttle("AttackAction", 6000, function () {
-                if (option == "攻擊" && HEROspeed.value >= 100) {
+                if (option == "攻擊") {
                     blockMenu.closeMenu()
                     BattleReturns += 1
                     HEROspeed.value = 0
@@ -3300,7 +3299,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         effects.clearParticles(BOSS2)
                     })
                 }
-                if (option == "治癒" && HEROspeed.value >= 100) {
+                if (option == "治癒") {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         BattleReturns += 1
@@ -6995,7 +6994,6 @@ game.onUpdateInterval(100, function () {
                                 blockMenu.showMenu(["攻擊", "治癒", "十字斬", "血刃之咒"], MenuStyle.List, MenuLocation.BottomHalf)
                             } else {
                                 blockMenu.showMenu(["攻擊", "治癒", "十字斬"], MenuStyle.List, MenuLocation.BottomHalf)
-
                             }
                         })
                     }
