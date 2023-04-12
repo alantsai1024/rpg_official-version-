@@ -5698,6 +5698,7 @@ game.onUpdateInterval(100, function () {
                 game.showLongText("生命 +13500", DialogLayout.Bottom)
                 Damage += 500
                 HPvalue += 13500
+                SPvalue += 260 
                 CurrentWeapon = "神劍"
             }
             if (Hero.overlapsWith(Juggernaut)) {
