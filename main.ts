@@ -887,7 +887,7 @@ function TittleScene() {
     game.showLongText("失敗條件:玩家HP為0", DialogLayout.Bottom)
     game.showLongText("按下B後可以查看玩家訊息", DialogLayout.Bottom)
     game.splash("1F", "難度:簡單")
-   
+
 }
 function Enemy1HPcreate() {
     if (Scene == 1) {
@@ -2359,30 +2359,30 @@ blockMenu.onMenuOptionSelected(function (option, index) {
     }
     if (option == "飲用") {
         blockMenu.closeMenu()
-        SPvalue += 50
         game.showLongText("法力 +50", DialogLayout.Bottom)
+        SPvalue += 50
     } else {
         blockMenu.closeMenu()
     }
     if (option == "食用") {
         blockMenu.closeMenu()
-        HPvalue += 1200
         game.showLongText("生命 +1200", DialogLayout.Bottom)
+        HPvalue += 1200
     } else {
         blockMenu.closeMenu()
     }
     if (option == "服用") {
         blockMenu.closeMenu()
+        game.showLongText("玩家獲得對火屬性傷害免疫", DialogLayout.Bottom)
         FireRistent = 1
         SuperState = "火免"
-        game.showLongText("玩家獲得對火屬性傷害免疫", DialogLayout.Bottom)
     } else {
         blockMenu.closeMenu()
     }
     if (Battle == 1) {
         if (CurrentEnemy == 1) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊" ) {
+                if (option == "攻擊") {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     EnemyHP_1.value += 0 - Damage
@@ -2467,7 +2467,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         }
         if (CurrentEnemy == 2) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊" ) {
+                if (option == "攻擊") {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     EnemyHP_2.value += 0 - Damage
@@ -2480,7 +2480,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         effects.clearParticles(Enemy2)
                     })
                 }
-                if (option == "治癒" ) {
+                if (option == "治癒") {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2553,7 +2553,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         }
         if (CurrentEnemy == 3) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊" ) {
+                if (option == "攻擊") {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     EnemyHP_3.value += 0 - Damage
@@ -2566,7 +2566,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         effects.clearParticles(Enemy3)
                     })
                 }
-                if (option == "治癒" ) {
+                if (option == "治癒") {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -2639,7 +2639,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         }
         if (CurrentEnemy == 4) {
             timer.throttle("AttackAction", 2000, function () {
-                if (option == "攻擊" ) {
+                if (option == "攻擊") {
                     blockMenu.closeMenu()
                     HEROspeed.value = 0
                     BOSSHP_1.value += 0 - Damage
@@ -2651,7 +2651,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                         Hero.setPosition(210, 140)
                         effects.clearParticles(BOSS1)
                     })
-                }else if (option == "治癒") {
+                } else if (option == "治癒") {
                     if (SP.value >= 8) {
                         blockMenu.closeMenu()
                         RecoverHP()
@@ -4157,7 +4157,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
                     `
                 ], 350, true)
             })
-        }else{
+        } else {
 
         }
     }
@@ -4257,12 +4257,18 @@ FireRistent = 0         //是否有火免狀態
 CurrentEnemy = 0        //當前遇到的敵人
 SuperState = "無"
 RecoverValue = 80       //治癒量
+let PressAtimes = 0
+PressAtimes = 0
 game.onUpdate(function () {
     Moving = controller.up.isPressed() || controller.left.isPressed() || (controller.right.isPressed() || controller.down.isPressed())
     if (!(Moving)) {
         animation.stopAnimation(animation.AnimationTypes.MovementAnimation, Hero)
     }
 })
+game.onUpdateInterval(5000, function () {
+    PressAtimes = 0
+})
+
 game.onUpdateInterval(100, function () {
     if (Scene == 0) {
         if (controller.A.isPressed()) {
@@ -4271,6 +4277,22 @@ game.onUpdateInterval(100, function () {
     }
     if (Scene == 1) {
         if (Battle == 0) {
+            if (controller.A.isPressed()) {
+                PressAtimes += 1
+                if (PressAtimes == 5) {
+                    game.splash("不要一直按A鍵!!(10)")
+                    game.splash("不要一直按A鍵!!(9)")
+                    game.splash("不要一直按A鍵!!(8)")
+                    game.splash("不要一直按A鍵!!(7)")
+                    game.splash("不要一直按A鍵!!(6)")
+                    game.splash("不要一直按A鍵!!(5)")
+                    game.splash("不要一直按A鍵!!(4)")
+                    game.splash("不要一直按A鍵!!(3)")
+                    game.splash("不要一直按A鍵!!(2)")
+                    game.splash("不要一直按A鍵!!(1)")
+                    PressAtimes = 0
+                }
+            }
             if (Hero.overlapsWith(treasure1)) {
                 sprites.destroy(treasure1, effects.none, 100)
                 TouchWeapon = "長劍"
@@ -5671,6 +5693,22 @@ game.onUpdateInterval(100, function () {
     }
     if (Scene == 2) {
         if (Battle == 0) {
+            if (controller.A.isPressed()) {
+                PressAtimes += 1
+                if (PressAtimes == 6) {
+                    game.splash("不要一直按A鍵!!(10)")
+                    game.splash("不要一直按A鍵!!(9)")
+                    game.splash("不要一直按A鍵!!(8)")
+                    game.splash("不要一直按A鍵!!(7)")
+                    game.splash("不要一直按A鍵!!(6)")
+                    game.splash("不要一直按A鍵!!(5)")
+                    game.splash("不要一直按A鍵!!(4)")
+                    game.splash("不要一直按A鍵!!(3)")
+                    game.splash("不要一直按A鍵!!(2)")
+                    game.splash("不要一直按A鍵!!(1)")
+                    PressAtimes = 0
+                }
+            }
             if (Hero.overlapsWith(treasure4)) {
                 sprites.destroy(treasure4, effects.none, 100)
                 game.splash("獲得生命之果")
@@ -5695,10 +5733,11 @@ game.onUpdateInterval(100, function () {
                 game.splash("得到神劍")
                 game.showLongText("獲得神的祝福", DialogLayout.Bottom)
                 game.showLongText("傷害 +500", DialogLayout.Bottom)
-                game.showLongText("生命 +13500", DialogLayout.Bottom)
+                game.showLongText("生命 +15000", DialogLayout.Bottom)
+                game.showLongText("法力 +260", DialogLayout.Bottom)
                 Damage += 500
-                HPvalue += 13500
-                SPvalue += 260 
+                HPvalue += 15000
+                SPvalue += 260
                 CurrentWeapon = "神劍"
             }
             if (Hero.overlapsWith(Juggernaut)) {
@@ -6711,6 +6750,7 @@ game.onUpdateInterval(100, function () {
                         EXP += 1200
                         game.splash("EXP +1200")
                         if (EXP >= 2000) {
+                            PressAtimes = -10
                             game.splash("升級! 8 to 9", "SP +40")
                             game.splash("升級! 9 to 10", "HP +300")
                             game.splash("升級! 10 to 11", "傷害 +100")
@@ -6729,6 +6769,7 @@ game.onUpdateInterval(100, function () {
                             RecoverValue += 420
                             Damage += 370
                             SPvalue += 100
+
                         }
                     })
                 }
