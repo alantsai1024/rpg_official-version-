@@ -6,7 +6,7 @@
 *治癒:使自身恢復HP(隨等級增長而增加治癒量)[開局即有]
 *十字斬:對敵人造成兩次傷害(基於自身傷害增長)[達到5級]
 *血刃之咒:提升傷害1.5倍持續3回合(不可疊加)[達到20級]
-
+ 
 友情攻略提示:
 *2F的所有敵人生命值愈低防禦越強，只有使用絕技可以無視敵人防禦
 */
@@ -1730,6 +1730,9 @@ function Scene1F() {
         .........2222222222.....
         `, SpriteKind.Enemy)
     //一樓位置
+    scaling.scaleToPercent(Enemy1, 150, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+    scaling.scaleToPercent(Enemy2, 150, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+    
     tiles.placeOnTile(Hero, tiles.getTileLocation(0, 0))
     tiles.placeOnTile(Enemy1, tiles.getTileLocation(5, 8))
     tiles.placeOnTile(Enemy2, tiles.getTileLocation(6, 1))
